@@ -1,116 +1,152 @@
 import { Link } from "@tanstack/react-router";
 
-interface SlideItem {
+export interface SlideItem {
+  id: number;
   category: string;
   title: string;
   descriptor: string;
   action: string;
   link: string;
-  image: string;
+  imageDesktop: string;
+  imageMobile: string;
 }
 
 /**
- * CinematicScrollway — 10 2.39:1 Panoramic Widescreen Visual Banners in Hermès Luxury Aesthetic.
+ * CinematicScrollway — 10 Visual Banners in Hermès Luxury Aesthetic:
+ * - Desktop View: 2.39:1 Panoramic Widescreen Aspect Ratio.
+ * - Mobile View: 4:5 Portrait Luxury Aspect Ratio.
+ * - Supports separate desktop and mobile image assets per slide.
  */
-const slides: SlideItem[] = [
+export const slides: SlideItem[] = [
   {
+    id: 1,
     category: "Invisible Grills",
     title: "The Invisible Threshold",
     descriptor: "Balcony & Window Invisible Grills",
     action: "Discover",
     link: "/category/invisible-grills",
-    image: "/images/homepage/banner-1.jpg",
+    imageDesktop: "/images/homepage/banner-1.jpg",
+    imageMobile: "/images/homepage/banner-1.jpg",
   },
   {
+    id: 2,
     category: "Core Safety Nets",
     title: "The Weightless Embrace",
     descriptor: "Balcony & Children Safety Nets",
     action: "Discover",
     link: "/category/core-safety-nets",
-    image: "/images/homepage/banner-2.jpg",
+    imageDesktop: "/images/homepage/banner-2.jpg",
+    imageMobile: "/images/homepage/banner-2.jpg",
   },
   {
+    id: 3,
     category: "Construction & Industrial",
     title: "Structural Architecture",
     descriptor: "Heavy-Duty Debris & Fall Containment",
     action: "Discover",
     link: "/category/construction-industrial",
-    image: "/images/homepage/banner-3.jpg",
+    imageDesktop: "/images/homepage/banner-3.jpg",
+    imageMobile: "/images/homepage/banner-3.jpg",
   },
   {
+    id: 4,
     category: "Animal & Bird Protection",
     title: "The Winged Sanctuary",
     descriptor: "Pigeon Nets & Stainless Steel Bird Spikes",
     action: "Discover",
     link: "/category/animal-bird-protection",
-    image: "/images/homepage/banner-4.jpg",
+    imageDesktop: "/images/homepage/banner-4.jpg",
+    imageMobile: "/images/homepage/banner-4.jpg",
   },
   {
+    id: 5,
     category: "Specialty Solutions",
     title: "The Aperture Collection",
     descriptor: "Sports Practice Nets & Ceiling Cloth Hangers",
     action: "Discover",
     link: "/category/specialty-solutions",
-    image: "/images/homepage/banner-5.jpg",
+    imageDesktop: "/images/homepage/banner-5.jpg",
+    imageMobile: "/images/homepage/banner-5.jpg",
   },
   {
+    id: 6,
     category: "AMR Atelier",
     title: "Genesis of Serenity",
     descriptor: "Atelier Heritage & Brand Ethos",
     action: "Explore",
     link: "/our-story",
-    image: "/images/homepage/banner-6.jpg",
+    imageDesktop: "/images/homepage/banner-6.jpg",
+    imageMobile: "/images/homepage/banner-6.jpg",
   },
   {
+    id: 7,
     category: "AMR Atelier",
     title: "The Forged Elegance",
     descriptor: "Materials, Metallurgy & Tensile Science",
     action: "Explore",
     link: "/craftsmanship",
-    image: "/images/homepage/banner-7.jpg",
+    imageDesktop: "/images/homepage/banner-7.jpg",
+    imageMobile: "/images/homepage/banner-7.jpg",
   },
   {
+    id: 8,
     category: "AMR Atelier",
     title: "Boundless Horizons",
     descriptor: "Architectural Living Spaces & Views",
     action: "Explore",
     link: "/lifestyle",
-    image: "/images/homepage/banner-8.jpg",
+    imageDesktop: "/images/homepage/banner-8.jpg",
+    imageMobile: "/images/homepage/banner-8.jpg",
   },
   {
+    id: 9,
     category: "Maintenance & Care",
     title: "The Enduring Shield",
     descriptor: "Cleaning, Inspection & Retensioning Protocol",
     action: "Learn More",
     link: "/maintenance-repair",
-    image: "/images/homepage/banner-9.jpg",
+    imageDesktop: "/images/homepage/banner-9.jpg",
+    imageMobile: "/images/homepage/banner-9.jpg",
   },
   {
+    id: 10,
     category: "Regional Operations",
     title: "Verified Service Hubs",
     descriptor: "Hyderabad · Bengaluru · Chennai · Kochi · Vizag",
     action: "View Areas",
     link: "/service-areas",
-    image: "/images/homepage/banner-10.jpg",
+    imageDesktop: "/images/homepage/banner-10.jpg",
+    imageMobile: "/images/homepage/banner-10.jpg",
   },
 ];
 
 export function CinematicScrollway() {
   return (
     <div className="w-full flex flex-col bg-[#FAF8F5] z-10 relative select-none">
-      {slides.map((slide, index) => (
+      {slides.map((slide) => (
         <Link
-          key={index}
+          key={slide.id}
           to={slide.link}
-          className="sn-chanel-slide group relative w-full aspect-[2.39/1] focus-ring border-b border-[#1C1917]/10 flex flex-col justify-end"
+          className="sn-chanel-slide group relative w-full aspect-[4/5] md:aspect-[2.39/1] focus-ring border-b border-[#1C1917]/10 flex flex-col justify-end overflow-hidden"
           aria-label={`${slide.action}: ${slide.descriptor} (${slide.title})`}
         >
-          {/* Visual Image Background */}
+          {/* Visual Image Background Container */}
           <div className="absolute inset-0 w-full h-full z-0 pointer-events-none">
+            {/* Desktop Visual Image (2.39:1 Panoramic Widescreen) */}
             <img
-              src={slide.image}
-              alt={`${slide.title} — ${slide.descriptor}`}
-              className="w-full h-full object-cover"
+              src={slide.imageDesktop}
+              alt={`${slide.title} — ${slide.descriptor} (Desktop View)`}
+              className="hidden md:block w-full h-full object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+
+            {/* Mobile Visual Image (4:5 Portrait Aspect Ratio) */}
+            <img
+              src={slide.imageMobile}
+              alt={`${slide.title} — ${slide.descriptor} (Mobile View 4:5)`}
+              className="md:hidden w-full h-full object-cover object-center"
+              loading="lazy"
               decoding="async"
             />
           </div>
@@ -120,24 +156,24 @@ export function CinematicScrollway() {
             className="absolute inset-0 pointer-events-none z-10"
             style={{
               background:
-                "linear-gradient(to top, rgba(28,25,23,0.7) 0%, rgba(28,25,23,0.18) 50%, rgba(28,25,23,0.05) 100%)",
+                "linear-gradient(to top, rgba(28,25,23,0.75) 0%, rgba(28,25,23,0.25) 45%, rgba(28,25,23,0.02) 100%)",
             }}
           />
 
           {/* Center-to-Down Typography Overlay */}
-          <div className="relative z-20 flex flex-col items-center text-center w-full px-3 sm:px-6 md:px-12 pb-[6%] sm:pb-[7%] md:pb-[8%] max-w-3xl mx-auto">
+          <div className="relative z-20 flex flex-col items-center text-center w-full px-4 sm:px-6 md:px-12 pb-10 sm:pb-12 md:pb-[6%] max-w-3xl mx-auto">
             {/* Category Eyebrow */}
-            <span className="sn-eyebrow text-[#FAF8F5]/90 drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)] mb-1 sm:mb-1.5 uppercase block whitespace-nowrap">
+            <span className="sn-eyebrow text-[#FAF8F5]/90 drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)] mb-1.5 sm:mb-2 uppercase block">
               {slide.category}
             </span>
 
             {/* Collection / Section Title */}
-            <h2 className="sn-h1 text-white max-w-2xl drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)] mb-1 sm:mb-1.5 px-1 whitespace-nowrap">
+            <h2 className="sn-h1 text-white max-w-2xl drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)] mb-1.5 sm:mb-2 px-2 text-center">
               {slide.title}
             </h2>
 
             {/* Plain Descriptor */}
-            <p className="sn-subtext text-[#FAF8F5]/95 drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)] mb-2.5 sm:mb-3.5 max-w-md px-1 whitespace-nowrap">
+            <p className="sn-subtext text-[#FAF8F5]/95 drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)] mb-4 sm:mb-5 max-w-md px-2 text-center">
               {slide.descriptor}
             </p>
 
