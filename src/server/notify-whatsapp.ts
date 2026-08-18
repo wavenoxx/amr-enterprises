@@ -77,7 +77,7 @@ export async function notifyOwnerWhatsApp(
       .join(" | ") || "Direct / Organic";
 
   const messageBody = [
-    `*🏛️ SafeNest — New Private Site Survey Request*`,
+    `*🏛️ AMR Enterprises — New Private Site Survey Request*`,
     ``,
     `*Lead ID:* \`${payload.leadId}\``,
     `*Customer:* ${payload.customerName}`,

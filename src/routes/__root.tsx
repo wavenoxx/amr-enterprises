@@ -19,19 +19,19 @@ import { ConsentBanner, initializeGoogleConsentDefaults } from "@/components/Con
 
 function NotFoundComponent() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background px-4">
+    <div className="flex min-h-screen items-center justify-center bg-[#FAF8F5] px-4">
       <div className="max-w-md text-center">
-        <h1 className="text-7xl font-light text-foreground">404</h1>
-        <h2 className="mt-4 text-xl font-normal text-foreground uppercase tracking-widest">
+        <h1 className="text-7xl font-light text-[#1C1917] font-serif">404</h1>
+        <h2 className="mt-4 text-xl font-normal text-[#1C1917] uppercase tracking-widest font-serif">
           Page not found
         </h2>
-        <p className="mt-2 text-sm text-muted-foreground font-light">
+        <p className="mt-2 text-sm text-[#78716C] font-light">
           The requested page does not exist or has been moved.
         </p>
         <div className="mt-6">
           <Link
             to="/"
-            className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-2.5 text-xs font-light uppercase tracking-widest text-primary-foreground transition-colors hover:bg-primary/90 min-h-11 focus-ring"
+            className="sn-btn-luxury-solid"
           >
             Return to Home
           </Link>
@@ -49,12 +49,12 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   }, [error]);
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background px-4">
+    <div className="flex min-h-screen items-center justify-center bg-[#FAF8F5] px-4">
       <div className="max-w-md text-center">
-        <h1 className="text-xl font-normal tracking-wide text-foreground uppercase">
+        <h1 className="text-xl font-normal tracking-wide text-[#1C1917] uppercase font-serif">
           An error occurred
         </h1>
-        <p className="mt-2 text-sm text-muted-foreground font-light">
+        <p className="mt-2 text-sm text-[#78716C] font-light">
           Something went wrong loading this view. You may refresh or return home.
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-3">
@@ -64,13 +64,13 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
               router.invalidate();
               reset();
             }}
-            className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-2.5 text-xs font-light uppercase tracking-widest text-primary-foreground transition-colors hover:bg-primary/90 min-h-11 focus-ring"
+            className="sn-btn-luxury-solid cursor-pointer"
           >
             Try again
           </button>
           <Link
             to="/"
-            className="inline-flex items-center justify-center rounded-full border border-input bg-background px-6 py-2.5 text-xs font-light uppercase tracking-widest text-foreground transition-colors hover:bg-accent min-h-11 focus-ring"
+            className="sn-btn-luxury-dark"
           >
             Go home
           </Link>
@@ -83,15 +83,15 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "SafeNest",
-  legalName: "SafeNest Architectural Safety Atelier",
+  name: "AMR Enterprises",
+  legalName: "AMR Enterprises Architectural Safety Atelier",
   url: "https://safenestindia.com",
   logo: "https://safenestindia.com/images/homepage/banner-1.jpg",
   image: "https://safenestindia.com/images/homepage/banner-1.jpg",
   description:
     "Bespoke architectural safety solutions: invisible grills, safety netting, and bird protection across verified South India service areas.",
   telephone: "+919553879931",
-  email: "safenestind@gmail.com",
+  email: "amrenterprisesind@gmail.com",
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "+919553879931",
@@ -163,7 +163,7 @@ function RootShell({ children }: { children: ReactNode }) {
   }, []);
 
   return (
-    <html lang="en" style={{ backgroundColor: "#050505", color: "#ffffff" }} className="bg-[#050505]">
+    <html lang="en" style={{ backgroundColor: "#FAF8F5", color: "#1C1917" }} className="bg-[#FAF8F5]">
       <head>
         <HeadContent />
         {/* Google tag (gtag.js) */}
@@ -181,7 +181,7 @@ function RootShell({ children }: { children: ReactNode }) {
           }}
         />
       </head>
-      <body style={{ backgroundColor: "#050505", color: "#ffffff" }} className="bg-[#050505] text-white selection:bg-white/20">
+      <body style={{ backgroundColor: "#FAF8F5", color: "#1C1917" }} className="bg-[#FAF8F5] text-[#1C1917] selection:bg-[#F37021]/20">
         {children}
         <ConsentBanner />
         <Scripts />
@@ -195,7 +195,7 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <div className="min-h-screen bg-[#050505] text-white">
+      <div className="min-h-screen bg-[#FAF8F5] text-[#1C1917]">
         <Outlet />
       </div>
       <Toaster position="bottom-center" />

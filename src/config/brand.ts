@@ -1,6 +1,6 @@
 export const BRAND_CONFIG = {
-  name: "SafeNest",
-  tagline: "The Art of Invisible Protection",
+  name: "AMR Enterprises",
+  tagline: "The Art of Architectural Safety & Elegance",
   description:
     "Bespoke architectural safety solutions: invisible grills, precision safety netting, and bird protection across South India.",
 
@@ -9,7 +9,7 @@ export const BRAND_CONFIG = {
     phoneDial: "+919553879931",
     whatsappDisplay: "+91 95538 79931",
     whatsappDial: "919553879931",
-    email: "safenestind@gmail.com",
+    email: "amrenterprisesind@gmail.com",
     address:
       "Regional Operations: South India (Telangana, Andhra Pradesh, Karnataka, Tamil Nadu, Kerala)",
   },

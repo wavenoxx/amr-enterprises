@@ -8,7 +8,7 @@ import { buildMetaTags } from "@/lib/seo";
 export const Route = createFileRoute("/solutions")({
   head: () =>
     buildMetaTags({
-      title: "Architectural Safety Solutions Explorer",
+      title: `Architectural Safety Solutions Explorer — ${BRAND_CONFIG.name}`,
       description: `Explore the complete architectural catalog of ${BRAND_CONFIG.name}: invisible grills, safety netting, construction containment, and bird protection across South India.`,
       canonicalPath: "/solutions",
       ogImage: "/images/campaigns/campaign-2-card-1.jpg",
@@ -97,12 +97,12 @@ function SolutionsExplorer() {
   };
 
   return (
-    <div className="bg-[#050505] text-white min-h-screen">
+    <div className="bg-[#FAF8F5] text-[#1C1917] min-h-screen">
       <SiteNav />
 
       {/* Mobile Magazine Lookbook */}
       <div
-        className="block md:hidden h-[100dvh] w-full overflow-y-scroll snap-y snap-mandatory relative bg-[#050505]"
+        className="block md:hidden h-[100dvh] w-full overflow-y-scroll snap-y snap-mandatory relative bg-[#FAF8F5]"
         onScroll={(e) => {
           const index = Math.round(e.currentTarget.scrollTop / window.innerHeight);
           if (index !== activeMobileIndex) setActiveMobileIndex(index);
@@ -111,7 +111,7 @@ function SolutionsExplorer() {
         {columns.map((col, index) => (
           <section
             key={col.id}
-            className="w-full h-[100dvh] snap-start relative flex flex-col justify-between p-6 overflow-hidden select-none bg-[#050505]"
+            className="w-full h-[100dvh] snap-start relative flex flex-col justify-between p-6 overflow-hidden select-none bg-[#FAF8F5]"
           >
             <div className="absolute inset-0 overflow-hidden bg-neutral-950">
               <img
@@ -121,10 +121,10 @@ function SolutionsExplorer() {
                 loading="lazy"
               />
             </div>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-black/20" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#1C1917]/95 via-[#1C1917]/50 to-[#1C1917]/20" />
 
             <div className="relative z-10 w-full mt-auto pb-10 flex flex-col items-start text-white">
-              <span className="font-sans text-[9px] tracking-[0.25em] text-neutral-400 mb-1 uppercase font-light">
+              <span className="font-sans text-[9px] tracking-[0.25em] text-[#F37021] mb-1 uppercase font-medium">
                 Category
               </span>
               <h2
@@ -137,7 +137,7 @@ function SolutionsExplorer() {
                 {col.title}
               </h2>
 
-              <div className="flex flex-col w-full border-b border-white/10">
+              <div className="flex flex-col w-full border-b border-white/15">
                 {col.services.map((s, sIdx) => {
                   const delay =
                     ["delay-100", "delay-200", "delay-300", "delay-400"][sIdx] ?? "delay-500";
@@ -147,12 +147,12 @@ function SolutionsExplorer() {
                       key={s.slug}
                       to="/service/$serviceId"
                       params={{ serviceId: s.slug }}
-                      className={`w-full border-t border-white/15 py-3.5 flex justify-between items-center text-[11px] font-sans font-light text-neutral-200 hover:text-white uppercase tracking-wider transition-all duration-700 ease-out transform focus-ring ${delay} ${
+                      className={`w-full border-t border-white/15 py-3.5 flex justify-between items-center text-[11px] font-sans font-light text-[#FAF8F5] hover:text-[#F37021] uppercase tracking-wider transition-all duration-700 ease-out transform focus-ring ${delay} ${
                         visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
                       }`}
                     >
                       <span>{s.label}</span>
-                      <span className="text-white/50 font-light">→</span>
+                      <span className="text-[#F37021] font-light">→</span>
                     </Link>
                   );
                 })}
@@ -163,7 +163,7 @@ function SolutionsExplorer() {
       </div>
 
       {/* Desktop Shoji Accordion Layout */}
-      <div className="hidden md:flex w-full h-screen overflow-hidden bg-[#050505] flex-row relative font-sans">
+      <div className="hidden md:flex w-full h-screen overflow-hidden bg-[#FAF8F5] flex-row relative font-sans">
         {columns.map((col, i) => {
           const active = hoveredIndex === i;
           return (
@@ -171,7 +171,7 @@ function SolutionsExplorer() {
               key={col.id}
               onMouseEnter={() => setHoveredIndex(i)}
               onMouseLeave={() => setHoveredIndex(null)}
-              className={`group w-full ${widthClass(i)} transition-all duration-[1000ms] ease-out relative flex flex-col justify-between overflow-hidden p-8 border-r border-white/10 bg-[#050505]`}
+              className={`group w-full ${widthClass(i)} transition-all duration-[1000ms] ease-out relative flex flex-col justify-between overflow-hidden p-8 border-r border-[#1C1917]/10 bg-[#FAF8F5]`}
             >
               <div className="absolute inset-0 w-full h-full bg-neutral-950 overflow-hidden">
                 <img
@@ -181,13 +181,13 @@ function SolutionsExplorer() {
                   loading="eager"
                 />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/20" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1C1917]/90 via-[#1C1917]/40 to-[#1C1917]/20" />
 
               <div className="relative z-10 flex flex-col h-full justify-between">
                 <div>
                   <p
-                    className="text-[10px] uppercase tracking-[0.3em] text-neutral-400 mb-3"
-                    style={{ fontWeight: 300 }}
+                    className="text-[10px] uppercase tracking-[0.3em] text-[#F37021] mb-3 font-medium"
+                    style={{ fontWeight: 400 }}
                   >
                     Category
                   </p>
@@ -207,7 +207,7 @@ function SolutionsExplorer() {
                         key={s.slug}
                         to="/service/$serviceId"
                         params={{ serviceId: s.slug }}
-                        className="text-[12px] font-light text-neutral-300 tracking-wider hover:text-white block mb-4 underline decoration-[0.5px] underline-offset-4 focus-ring"
+                        className="text-[12px] font-light text-[#FAF8F5] tracking-wider hover:text-[#F37021] block mb-4 underline decoration-[0.5px] underline-offset-4 focus-ring transition-colors"
                       >
                         {s.label}
                       </Link>
@@ -218,7 +218,7 @@ function SolutionsExplorer() {
                 <Link
                   to="/category/$categoryId"
                   params={{ categoryId: col.id }}
-                  className="relative z-10 text-[10px] uppercase tracking-[0.25em] text-neutral-400 hover:text-white mt-6 focus-ring"
+                  className="relative z-10 text-[10px] uppercase tracking-[0.25em] text-[#FAF8F5]/80 hover:text-[#F37021] mt-6 focus-ring transition-colors font-medium"
                 >
                   View Category →
                 </Link>

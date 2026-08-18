@@ -47,7 +47,7 @@ export const categoriesData: Record<string, CategoryDetail> = {
       "child-safety-invisible-grills",
     ],
     overview:
-      "SafeNest Invisible Grills are modern architectural fall-prevention systems engineered for high-rise balconies, stairwells, and windows. Made with high-tensile AISI 316 marine-grade stainless steel cables encased in clear UV-stabilized Nylon-12, they provide robust edge protection while maintaining uninterrupted panoramic views and building exterior aesthetics.",
+      "AMR Enterprises Invisible Grills are modern architectural fall-prevention systems engineered for high-rise balconies, stairwells, and windows. Made with high-tensile AISI 316 marine-grade stainless steel cables encased in clear UV-stabilized Nylon-12, they provide robust edge protection while maintaining uninterrupted panoramic views and building exterior aesthetics.",
     applications: [
       "High-rise residential apartment balconies and utility decks",
       "Full-height French windows and sliding glass fenestrations",
@@ -83,7 +83,7 @@ export const categoriesData: Record<string, CategoryDetail> = {
       {
         question: "Can invisible grills be cut during a fire emergency?",
         answer:
-          "Yes. Unlike traditional wrought iron grates that require power angle grinders or welding torches to breach, SafeNest stainless steel cables can be cleanly severed in seconds with a heavy-duty handheld wire cutter for emergency egress.",
+          "Yes. Unlike traditional wrought iron grates that require power angle grinders or welding torches to breach, AMR Enterprises stainless steel cables can be cleanly severed in seconds with a heavy-duty handheld wire cutter for emergency egress.",
       },
       {
         question: "Will the cables rust or discolor over time?",
@@ -115,7 +115,7 @@ export const categoriesData: Record<string, CategoryDetail> = {
       "building-safety-nets",
     ],
     overview:
-      "SafeNest Core Safety Nets provide dependable containment solutions for apartment balconies, open stairwells, and structural building shafts. Fabricated from 100% virgin high-density polyethylene (HDPE) monofilament with integrated UV carbon stabilizers, they absorb kinetic impact and prevent accidental falls without obstructing airflow or daylight.",
+      "AMR Enterprises Core Safety Nets provide dependable containment solutions for apartment balconies, open stairwells, and structural building shafts. Fabricated from 100% virgin high-density polyethylene (HDPE) monofilament with integrated UV carbon stabilizers, they absorb kinetic impact and prevent accidental falls without obstructing airflow or daylight.",
     applications: [
       "Balcony open perimeters and utility wash areas",
       "Multi-story staircase voids and elevator shaft drops",
@@ -445,7 +445,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     description:
       "Enhanced safety grids featuring high-density micro-spacing and dual-key tension lockers.",
     detailParagraphs: [
-      "Unseen vigilance for what you cherish most. Children explore the world with boundless curiosity and little hesitation. For a parent, this means constant vigilance near balconies and high windows. SafeNest provides an architectural safeguard.",
+      "Unseen vigilance for what you cherish most. Children explore the world with boundless curiosity and little hesitation. For a parent, this means constant vigilance near balconies and high windows. AMR Enterprises provides an architectural safeguard.",
       "Our child-safety grids feature high-density 2-inch micro-spacing and dual-key tension lockers. It serves as a calm, protective boundary that watches over your toddlers and pets, letting you breathe easy in your own home.",
     ],
     images: ["/images/child-safety-invisible-grills.png"],
@@ -490,7 +490,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     description:
       "Reinforced netting with tightly spaced knots designed specifically for infant and toddler protection.",
     detailParagraphs: [
-      "Peace of mind for growing families. Toddlers are naturally drawn to open edges and railing slats. SafeNest children safety nets close every void from floor to ceiling.",
+      "Peace of mind for growing families. Toddlers are naturally drawn to open edges and railing slats. AMR Enterprises children safety nets close every void from floor to ceiling.",
       "Tightly woven heat-set knots ensure that the netting never loosens, giving you the freedom to let children play safely in the open air.",
     ],
     images: ["/images/children-safety-nets.png"],
@@ -531,7 +531,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       "Large-scale containment nets for multi-story duct shafts, open courtyards, and lightwells.",
     detailParagraphs: [
       "Building duct shafts and central courtyards in modern apartment complexes require protective containment to prevent falling objects and accidental falls.",
-      "SafeNest engineers large-span building safety nets anchored into concrete beams, protecting technicians, residents, and utility systems below.",
+      "AMR Enterprises engineers large-span building safety nets anchored into concrete beams, protecting technicians, residents, and utility systems below.",
     ],
     images: ["/images/building-safety-nets.png"],
     specs: [
@@ -571,7 +571,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       "Robust protective nets designed for warehouse racking, conveyor systems, and industrial plants.",
     detailParagraphs: [
       "Industrial facilities face risks from falling warehouse inventory and open mezzanine walkways.",
-      "SafeNest industrial nets secure high-bay storage racks and elevated platforms, preventing product loss and workplace injuries.",
+      "AMR Enterprises industrial nets secure high-bay storage racks and elevated platforms, preventing product loss and workplace injuries.",
     ],
     images: ["/images/industrial-safety-nets.png"],
     specs: [
@@ -610,7 +610,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       "Overhead safety nets protecting vehicles in parking bays from falling plaster and bird droppings.",
     detailParagraphs: [
       "Vehicles parked in open-to-sky podium bays or older apartment basements are exposed to falling plaster, concrete spalling, and bird fouling.",
-      "SafeNest installs horizontal canopy nets suspended above parking slots to keep vehicles clean and protected.",
+      "AMR Enterprises installs horizontal canopy nets suspended above parking slots to keep vehicles clean and protected.",
     ],
     images: ["/images/car-parking-safety-nets.png"],
     specs: [
@@ -628,7 +628,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     description:
       "Discreet monofilament nets preventing pigeons and birds from entering balconies and duct shafts.",
     detailParagraphs: [
-      "Pigeons cause severe hygiene issues, droppings, and respiratory allergens in urban high-rises. SafeNest pigeon nets solve this permanently without harming birds.",
+      "Pigeons cause severe hygiene issues, droppings, and respiratory allergens in urban high-rises. AMR Enterprises pigeon nets solve this permanently without harming birds.",
       "The fine translucent mesh creates an impenetrable physical boundary that blends into building facades.",
     ],
     images: ["/images/pigeon-safety-nets.png"],
@@ -648,7 +648,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     description:
       "Discreet blunt-tip stainless steel spikes preventing birds from roosting on ledges and AC units.",
     detailParagraphs: [
-      "Narrow window ledges, parapet copings, and AC outdoor compressors are prime roosting spots for pigeons. SafeNest bird spikes eliminate landing spots cleanly.",
+      "Narrow window ledges, parapet copings, and AC outdoor compressors are prime roosting spots for pigeons. AMR Enterprises bird spikes eliminate landing spots cleanly.",
       "Manufactured with 304-grade stainless steel rods on UV-stabilized polycarbonate bases, they withstand intense weathering without rusting.",
     ],
     images: ["/images/pigeons-bird-spikes.png"],
@@ -669,7 +669,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       "High-gauge, tear-resistant safety nets designed to withstand aggressive monkey intrusion.",
     detailParagraphs: [
       "Residences located near hills, green belts, or suburban zones frequently deal with aggressive monkey incursions onto balconies and terraces.",
-      "SafeNest monkey nets use extra-thick braided cords and structural perimeter fasteners that withstand pulling and biting forces without tearing.",
+      "AMR Enterprises monkey nets use extra-thick braided cords and structural perimeter fasteners that withstand pulling and biting forces without tearing.",
     ],
     images: ["/images/monkey-safety-nets.png"],
     specs: [
@@ -688,7 +688,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     description:
       "Precision-woven fiberglass and stainless steel window screens that block insects while allowing fresh air.",
     detailParagraphs: [
-      "Enjoy the cool evening breeze without worrying about mosquitoes, flies, or pests. SafeNest window insect screens integrate flush with your existing window frames.",
+      "Enjoy the cool evening breeze without worrying about mosquitoes, flies, or pests. AMR Enterprises window insect screens integrate flush with your existing window frames.",
       "Available in sliding, pleated, magnetic, and openable aluminum shutter configurations.",
     ],
     images: ["/images/mosquito-safety-nets.png"],
@@ -728,7 +728,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       "Heavy-gauge canopy nets suspended beneath coconut palms to catch falling coconuts.",
     detailParagraphs: [
       "Tall coconut trees surrounding driveways, walkways, and parking areas pose a significant hazard from falling coconuts.",
-      "SafeNest coconut nets are rigged beneath palm crowns on high-tensile steel wire ropes, catching falling coconuts gently before they can cause damage.",
+      "AMR Enterprises coconut nets are rigged beneath palm crowns on high-tensile steel wire ropes, catching falling coconuts gently before they can cause damage.",
     ],
     images: ["/images/coconut-safety-nets.png"],
     specs: [
@@ -765,7 +765,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     description:
       "Ceiling-mounted pulley systems with independent stainless steel rods that maximize balcony floor space.",
     detailParagraphs: [
-      "Free up your balcony floor space while drying laundry effortlessly. SafeNest ceiling cloth drying hangers feature individual rods that lower smoothly for loading.",
+      "Free up your balcony floor space while drying laundry effortlessly. AMR Enterprises ceiling cloth drying hangers feature individual rods that lower smoothly for loading.",
       "Constructed with rust-proof stainless steel or aluminum pipes and smooth nylon pulleys for effortless daily use.",
     ],
     images: ["/images/cloth-drying-hangers.png"],

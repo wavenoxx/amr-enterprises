@@ -8,7 +8,7 @@ import { buildMetaTags } from "@/lib/seo";
 export const Route = createFileRoute("/lifestyle")({
   head: () =>
     buildMetaTags({
-      title: "Architectural Living Spaces & Open Horizons",
+      title: `Architectural Living Spaces & Open Horizons — ${BRAND_CONFIG.name}`,
       description:
         "Living without hesitation: breathtaking panoramic views, open breezes, and child safety enjoyed in complete peace of mind.",
       canonicalPath: "/lifestyle",
@@ -43,34 +43,34 @@ const pillars = [
 
 function LifestylePage() {
   return (
-    <div className="bg-[#050505] text-white min-h-screen">
+    <div className="bg-[#FAF8F5] text-[#1C1917] min-h-screen">
       <SiteNav />
 
       {/* Hero Header with Exact 2.39:1 Cinematic Panoramic Visual */}
-      <section className="relative w-full aspect-[16/10] sm:aspect-[16/9] md:aspect-[2.39/1] max-h-[85vh] overflow-hidden bg-[#050505]">
+      <section className="relative w-full aspect-[16/10] sm:aspect-[16/9] md:aspect-[2.39/1] max-h-[85vh] overflow-hidden bg-[#FAF8F5]">
         <img
           src="/images/lifestyle/hero.png"
-          alt="SafeNest Architectural Living Spaces & Open Horizons"
+          alt="AMR Enterprises Architectural Living Spaces & Open Horizons"
           className="absolute inset-0 w-full h-full object-cover object-center"
           loading="eager"
           decoding="async"
         />
-        {/* Delicate Ambient Vignette for Pristine Color & Text Legibility */}
+        {/* Delicate Ambient Vignette */}
         <div
           className="absolute inset-0 pointer-events-none z-10"
           style={{
             background:
-              "linear-gradient(to top, rgba(5,5,5,0.8) 0%, rgba(5,5,5,0.2) 45%, rgba(5,5,5,0) 100%)",
+              "linear-gradient(to top, rgba(28,25,23,0.8) 0%, rgba(28,25,23,0.25) 45%, rgba(28,25,23,0.6) 100%)",
           }}
         />
         <div className="absolute inset-x-0 bottom-6 sm:bottom-10 md:bottom-14 text-center text-white px-6 max-w-4xl mx-auto z-20">
-          <p className="sn-eyebrow text-neutral-300 mb-1.5 md:mb-2 drop-shadow-md">
-            The Lifestyle · SafeNest House
+          <p className="sn-eyebrow text-[#FAF8F5]/90 mb-1.5 md:mb-2 drop-shadow-md">
+            The Lifestyle · {BRAND_CONFIG.name} House
           </p>
           <h1 className="sn-h1 text-white max-w-3xl mx-auto drop-shadow-lg mb-2 md:mb-3">
             Living Without Hesitation
           </h1>
-          <p className="font-serif italic text-base sm:text-lg md:text-xl text-neutral-200 leading-relaxed font-light drop-shadow-md">
+          <p className="font-serif italic text-base sm:text-lg md:text-xl text-[#FAF8F5] leading-relaxed font-light drop-shadow-md">
             "Breathtaking views, enjoyed in absolute peace of mind."
           </p>
         </div>
@@ -84,7 +84,7 @@ function LifestylePage() {
               key={p.title}
               className={`grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center ${p.reverse ? "md:[&>*:first-child]:order-2" : ""}`}
             >
-              <div className="sn-luxury-frame aspect-[3/4] bg-neutral-900 border border-white/10 overflow-hidden relative group">
+              <div className="sn-luxury-frame aspect-[3/4] bg-neutral-100 border border-[#1C1917]/10 overflow-hidden relative group shadow-md">
                 <img
                   src={p.image}
                   alt={p.title}
@@ -93,13 +93,13 @@ function LifestylePage() {
                 />
               </div>
               <div className="px-2 md:px-8">
-                <p className="sn-eyebrow text-neutral-400">
+                <p className="sn-eyebrow text-[#F37021] font-medium">
                   {p.eyebrow}
                 </p>
-                <h2 className="font-serif uppercase mt-4 text-xl md:text-2xl tracking-wider text-white font-light">
+                <h2 className="font-serif uppercase mt-4 text-xl md:text-2xl tracking-wider text-[#1C1917] font-light">
                   {p.title}
                 </h2>
-                <p className="mt-6 text-sm md:text-[15px] leading-relaxed font-light text-neutral-300 tracking-wide">
+                <p className="mt-6 text-sm md:text-[15px] leading-relaxed font-light text-[#44403C] tracking-wide">
                   {p.copy}
                 </p>
               </div>
@@ -109,15 +109,15 @@ function LifestylePage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 md:py-28 border-t border-white/10">
+      <section className="py-20 md:py-28 border-t border-[#1C1917]/10 bg-[#F4EFEA]">
         <div className="max-w-2xl mx-auto px-6 text-center">
-          <p className="sn-eyebrow text-neutral-400">
+          <p className="sn-eyebrow text-[#F37021] font-medium">
             An Invitation
           </p>
-          <h2 className="sn-h1 text-white mt-4 mb-4">
+          <h2 className="sn-h1 text-[#1C1917] mt-4 mb-4">
             Curate Your Sanctuary
           </h2>
-          <p className="sn-subtext text-neutral-300 max-w-md mx-auto mb-8">
+          <p className="sn-subtext text-[#44403C] max-w-md mx-auto mb-8">
             Begin a private survey of your space. Our advisors will compose a protection plan worthy
             of the home you've built.
           </p>
@@ -134,3 +134,5 @@ function LifestylePage() {
     </div>
   );
 }
+
+export default LifestylePage;

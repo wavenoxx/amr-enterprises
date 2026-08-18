@@ -10,9 +10,9 @@ import { buildMetaTags } from "@/lib/seo";
 export const Route = createFileRoute("/")({
   head: () =>
     buildMetaTags({
-      title: `${BRAND_CONFIG.name} — Invisible Grills & Safety Nets for Safer Homes`,
+      title: `${BRAND_CONFIG.name} — Invisible Grills & Safety Nets for Discerning Homes`,
       description:
-        "Bespoke architectural safety solutions: invisible grills, high-tensile safety netting, and bird deterrence for luxury homes across verified South India service areas.",
+        "Bespoke architectural safety solutions: invisible grills, high-tensile safety netting, and bird deterrence for luxury residences across South India.",
       canonicalPath: "/",
       ogImage: "/images/homepage/banner-1.jpg",
     }),
@@ -21,7 +21,7 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <div className="bg-[#050505] text-white">
+    <div className="bg-[#FAF8F5] text-[#1C1917]">
       <SiteNav />
       <Hero />
       <CinematicScrollway />

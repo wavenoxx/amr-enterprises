@@ -5,13 +5,14 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * Design system definition.
+ * Hermès Ultra-Luxury Design System for AMR Enterprises.
  *
- * The @theme inline block maps CSS custom properties to Tailwind utility
- * classes (e.g. --color-primary -> bg-primary, text-primary).
- *
- * The :root and .dark blocks define the actual color values using oklch.
- * All colors MUST use oklch format.
+ * Color Psychology:
+ * - Canvas: Warm Alabaster / Crème de Lait (#FAF8F5)
+ * - Surfaces / Cards: Studio Pure White (#FFFFFF) & Cashmere Stone (#F4EFEA)
+ * - Typography: Deep Espresso Noir (#1C1917), Charcoal (#44403C), Warm Taupe (#78716C)
+ * - Iconic Luxury Accent: L'Orange Hermès (#F37021), Deep Amber Hover (#D9531E)
+ * - Grounding Footers / Dark Blocks: Cuir Havane / Espresso Noir (#1C1917)
  */
 
 @theme inline {
@@ -62,73 +63,38 @@
 
 :root {
   --radius: 0.625rem;
-  --background: #050505;
-  --foreground: #ffffff;
-  --card: #0d0d0d;
-  --card-foreground: #ffffff;
-  --popover: #0d0d0d;
-  --popover-foreground: #ffffff;
-  --primary: #ffffff;
-  --primary-foreground: #050505;
-  --secondary: #171717;
-  --secondary-foreground: #ffffff;
-  --muted: #171717;
-  --muted-foreground: #a3a3a3;
-  --accent: #171717;
-  --accent-foreground: #ffffff;
+  --background: #FAF8F5;
+  --foreground: #1C1917;
+  --card: #FFFFFF;
+  --card-foreground: #1C1917;
+  --popover: #FAF8F5;
+  --popover-foreground: #1C1917;
+  --primary: #F37021;
+  --primary-foreground: #FFFFFF;
+  --secondary: #F4EFEA;
+  --secondary-foreground: #1C1917;
+  --muted: #EFEBE4;
+  --muted-foreground: #78716C;
+  --accent: #F37021;
+  --accent-foreground: #FFFFFF;
   --destructive: oklch(0.704 0.191 22.216);
-  --destructive-foreground: #ffffff;
-  --border: rgba(255, 255, 255, 0.1);
-  --input: rgba(255, 255, 255, 0.15);
-  --ring: rgba(255, 255, 255, 0.3);
+  --destructive-foreground: #FFFFFF;
+  --border: rgba(28, 25, 23, 0.08);
+  --input: rgba(28, 25, 23, 0.12);
+  --ring: #F37021;
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: #0d0d0d;
-  --sidebar-foreground: #ffffff;
-  --sidebar-primary: #ffffff;
-  --sidebar-primary-foreground: #050505;
-  --sidebar-accent: #171717;
-  --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: rgba(255, 255, 255, 0.1);
-  --sidebar-ring: rgba(255, 255, 255, 0.3);
-}
-
-.dark {
-  --background: oklch(0.129 0.042 264.695);
-  --foreground: oklch(0.984 0.003 247.858);
-  --card: oklch(0.208 0.042 265.755);
-  --card-foreground: oklch(0.984 0.003 247.858);
-  --popover: oklch(0.208 0.042 265.755);
-  --popover-foreground: oklch(0.984 0.003 247.858);
-  --primary: oklch(0.929 0.013 255.508);
-  --primary-foreground: oklch(0.208 0.042 265.755);
-  --secondary: oklch(0.279 0.041 260.031);
-  --secondary-foreground: oklch(0.984 0.003 247.858);
-  --muted: oklch(0.279 0.041 260.031);
-  --muted-foreground: oklch(0.704 0.04 256.788);
-  --accent: oklch(0.279 0.041 260.031);
-  --accent-foreground: oklch(0.984 0.003 247.858);
-  --destructive: oklch(0.704 0.191 22.216);
-  --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.551 0.027 264.364);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.208 0.042 265.755);
-  --sidebar-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-accent: oklch(0.279 0.041 260.031);
-  --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.551 0.027 264.364);
+  --sidebar: #FAF8F5;
+  --sidebar-foreground: #1C1917;
+  --sidebar-primary: #F37021;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #F4EFEA;
+  --sidebar-accent-foreground: #1C1917;
+  --sidebar-border: rgba(28, 25, 23, 0.08);
+  --sidebar-ring: #F37021;
 }
 
 @layer base {
@@ -146,16 +112,16 @@
     scroll-behavior: auto;
     scrollbar-gutter: stable;
     overflow-x: hidden;
-    background-color: #050505 !important;
-    color-scheme: dark;
+    background-color: #FAF8F5 !important;
+    color-scheme: light;
   }
 
   body,
   #root,
   #app,
   main {
-    background-color: #050505 !important;
-    color: #ffffff !important;
+    background-color: #FAF8F5 !important;
+    color: #1C1917 !important;
     font-family: var(--font-sans);
     font-size: 1rem;
     line-height: 1.6;
@@ -203,31 +169,14 @@
 @utility focus-ring {
   outline: none;
   &:focus-visible {
-    outline: 2px solid #171717;
+    outline: 2px solid #F37021;
     outline-offset: 2px;
   }
 }
 
-/* All entry animations removed — pure static quiet luxury, zero visual motion */
-@utility sn-anim-label {
-  opacity: 1;
-}
-
-@utility sn-anim-h1 {
-  opacity: 1;
-}
-
-@utility sn-anim-sub {
-  opacity: 1;
-}
-
-@utility sn-anim-cta {
-  opacity: 1;
-}
-
 /* ────────────────────────────────────────────────
-   Unified Brand Typography System (Quiet Luxury)
-   Matching Reference: Cormorant Garamond 300, 0.22em tracking
+   Unified Brand Typography System (Hermès Quiet Luxury)
+   Cormorant Garamond 300, 0.22em tracking
    ──────────────────────────────────────────────── */
 
 .sn-h1,
@@ -236,77 +185,102 @@
   font-weight: 300 !important;
   letter-spacing: 0.22em !important;
   text-transform: uppercase !important;
-  font-size: clamp(0.72rem, 3vw, 1.35rem) !important;
+  font-size: clamp(0.75rem, 3vw, 1.4rem) !important;
   line-height: 1.25 !important;
 }
 
 .sn-eyebrow {
   font-family: "Inter", system-ui, sans-serif !important;
-  font-weight: 300 !important;
-  font-size: clamp(6.5px, 1.5vw, 8.5px) !important;
-  letter-spacing: 0.35em !important;
+  font-weight: 400 !important;
+  font-size: clamp(7px, 1.5vw, 9px) !important;
+  letter-spacing: 0.32em !important;
   text-transform: uppercase !important;
 }
 
 .sn-subtext {
   font-family: "Inter", system-ui, sans-serif !important;
   font-weight: 300 !important;
-  font-size: clamp(7.8px, 1.9vw, 10px) !important;
+  font-size: clamp(8px, 1.9vw, 11px) !important;
   letter-spacing: 0.04em !important;
-  line-height: 1.45 !important;
+  line-height: 1.55 !important;
 }
 
+/* Hermès Outlined Luxury Button */
 .sn-btn-luxury {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.45);
   background-color: transparent;
   color: #ffffff;
-  padding: 0.3rem 1.05rem;
+  padding: 0.35rem 1.15rem;
   font-family: "Inter", system-ui, sans-serif;
-  font-size: clamp(6.8px, 1.5vw, 7.8px);
-  font-weight: 300;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  transition: border-color 150ms, background-color 150ms, color 150ms;
-  min-height: 25px;
-}
-
-.sn-btn-luxury:hover {
-  border-color: #ffffff;
-  background-color: #ffffff;
-  color: #050505;
-}
-
-.sn-btn-luxury-solid {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #ffffff;
-  background-color: #ffffff;
-  color: #050505;
-  padding: 0.625rem 1.75rem;
-  font-family: "Inter", system-ui, sans-serif;
-  font-size: 9.5px;
+  font-size: clamp(7px, 1.5vw, 8.5px);
   font-weight: 400;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  transition: border-color 150ms, background-color 150ms, color 150ms;
-  min-height: 40px;
+  transition: border-color 200ms ease, background-color 200ms ease, color 200ms ease, box-shadow 200ms ease;
+  min-height: 28px;
 }
 
-.sn-btn-luxury-solid:hover {
-  background-color: transparent;
+.sn-btn-luxury:hover {
+  border-color: #F37021;
+  background-color: #F37021;
   color: #ffffff;
+  box-shadow: 0 4px 14px rgba(243, 112, 33, 0.28);
 }
 
-/* Pure Black Visual Canvas (No visual images) */
-.sn-black-visual {
-  background-color: #050505;
-  background-image: radial-gradient(circle at 50% 50%, rgba(25, 25, 25, 0.3) 0%, rgba(5, 5, 5, 1) 100%);
-  position: relative;
-  overflow: hidden;
+/* Hermès Dark Outlined Button (for light surfaces) */
+.sn-btn-luxury-dark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(28, 25, 23, 0.25);
+  background-color: transparent;
+  color: #1C1917;
+  padding: 0.5rem 1.4rem;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  transition: border-color 200ms ease, background-color 200ms ease, color 200ms ease;
+  min-height: 38px;
+}
+
+.sn-btn-luxury-dark:hover {
+  border-color: #F37021;
+  background-color: #F37021;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(243, 112, 33, 0.2);
+}
+
+/* Hermès Signature Solid Luxury Button */
+.sn-btn-luxury-solid,
+.sn-btn-hermes {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #F37021;
+  background-color: #F37021;
+  color: #ffffff;
+  padding: 0.65rem 1.85rem;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  transition: border-color 200ms ease, background-color 200ms ease, color 200ms ease, box-shadow 200ms ease;
+  min-height: 42px;
+  box-shadow: 0 2px 10px rgba(243, 112, 33, 0.22);
+}
+
+.sn-btn-luxury-solid:hover,
+.sn-btn-hermes:hover {
+  background-color: #D9531E;
+  border-color: #D9531E;
+  color: #ffffff;
+  box-shadow: 0 4px 16px rgba(217, 83, 30, 0.35);
 }
 
 /* Universal luxury image container */
@@ -315,32 +289,22 @@
   overflow: hidden;
 }
 
-/* No zoom animations — static pure luxury images */
 .sn-luxury-img {
   transform: none;
   transition: none;
   will-change: auto;
 }
 
-/* Chanel Homepage Mockup Visual-to-Visual Scroll Section */
+/* Widescreen Panoramic Visual Section */
 .sn-chanel-slide {
   position: relative;
   width: 100%;
   overflow: hidden;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  background-color: #050505;
+  border-bottom: 1px solid rgba(28, 25, 23, 0.08);
+  background-color: #FAF8F5;
 }
 
-/* No zoom animations on slide media */
-.sn-chanel-media {
-  transform: none;
-  transition: none;
-  will-change: auto;
-}
-
-/* ────────────────────────────────────────────────
-   Global Prefers-Reduced-Motion Handling
-   ──────────────────────────────────────────────── */
+/* Reduced-Motion */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -349,27 +313,5 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
-  }
-
-  .sn-anim-label,
-  .sn-anim-h1,
-  .sn-anim-sub,
-  .sn-anim-cta,
-  .sn-anim-overlay,
-  .sn-fade-up,
-  .sn-fade,
-  .sn-dawn {
-    animation: none !important;
-    opacity: 1 !important;
-    transform: none !important;
-    filter: none !important;
-  }
-
-  /* Disable all scale transforms for reduced-motion users */
-  .sn-luxury-img,
-  .sn-chanel-media,
-  .sn-dolly-target {
-    transition: none !important;
-    transform: none !important;
   }
 }

@@ -2,22 +2,21 @@ import { Link } from "@tanstack/react-router";
 import { BRAND_CONFIG } from "@/config/brand";
 
 /**
- * Hero — Pure Black Screen & Exact Quiet Luxury Typography.
+ * Hero — Hermès Quiet Luxury Hero with Master Architectural Visuals.
  *
  * Directives:
- * - Pure black visual canvas (zero visual images).
- * - Desktop & Mobile (9:16) containers styled as deep black canvases.
- * - H1 Headline: "INVISIBLE GRILLS & SAFETY NETS" (Exact unified sn-h1 typography).
- * - Subtext: "Architectural safety for modern discerning homes." (Exact sn-subtext).
- * - Eyebrow: "SAFENEST · ARCHITECTURAL SAFETY" (Exact sn-eyebrow).
- * - Luxury framed CTAs matching reference image.
+ * - Desktop & Mobile (9:16) high-resolution photography canvas.
+ * - H1 Headline: "INVISIBLE GRILLS & SAFETY NETS" (Cormorant Garamond 300).
+ * - Subtext: "Architectural safety for modern discerning homes." (Inter 300).
+ * - Eyebrow: "AMR ENTERPRISES · ARCHITECTURAL SAFETY".
+ * - Hermès signature orange solid CTA + framed exploration CTA.
  */
 const Hero = () => {
   return (
     <section
-      className="relative w-full overflow-hidden bg-[#050505] sn-black-visual select-none"
+      className="relative w-full overflow-hidden bg-[#FAF8F5] select-none"
       style={{ height: "100dvh", minHeight: "600px" }}
-      aria-label="SafeNest Architectural Safety Hero"
+      aria-label={`${BRAND_CONFIG.name} Architectural Safety Hero`}
     >
       {/* Desktop Visual Container (Hero Image) */}
       <div
@@ -26,8 +25,9 @@ const Hero = () => {
       >
         <img
           src="/images/homepage/hero-desktop.jpg"
-          alt="SafeNest Widescreen Balcony Safety View"
+          alt="AMR Enterprises Widescreen Balcony Safety View"
           className="w-full h-full object-cover"
+          loading="eager"
         />
       </div>
 
@@ -38,29 +38,30 @@ const Hero = () => {
       >
         <img
           src="/images/homepage/hero-mobile.jpg"
-          alt="SafeNest Architectural Safety — Mobile Balcony View"
+          alt="AMR Enterprises Architectural Safety — Mobile Balcony View"
           className="w-full h-full object-cover"
+          loading="eager"
         />
       </div>
 
-      {/* Soft, Subtle Atmospheric Vignette to preserve original visual brilliance */}
+      {/* Warm Atmospheric Vignette to preserve photography brilliance while boosting legibility */}
       <div
         className="absolute inset-0 pointer-events-none z-10"
         style={{
           background:
-            "linear-gradient(to bottom, rgba(5,5,5,0.12) 0%, rgba(5,5,5,0) 50%, rgba(5,5,5,0.35) 100%)",
+            "linear-gradient(to bottom, rgba(28,25,23,0.2) 0%, rgba(28,25,23,0.05) 50%, rgba(28,25,23,0.6) 100%)",
         }}
       />
 
-      {/* Editorial Content Overlay (Lower-Third Placement matching Reference Image) */}
+      {/* Editorial Content Overlay (Lower-Third Placement) */}
       <div className="absolute inset-0 z-20 flex flex-col items-center justify-end pb-16 sm:pb-20 md:pb-24 px-6 md:px-12 text-center">
         {/* Unified H1 Headline with crisp contrast drop-shadow */}
-        <h1 className="sn-h1 text-white max-w-2xl drop-shadow-[0_2px_12px_rgba(0,0,0,0.65)] mb-3">
+        <h1 className="sn-h1 text-white max-w-2xl drop-shadow-[0_2px_12px_rgba(0,0,0,0.7)] mb-3">
           Invisible Grills &amp; Safety Nets
         </h1>
 
         {/* Unified Subtext Descriptor */}
-        <p className="sn-subtext text-neutral-200 max-w-md drop-shadow-[0_1.5px_6px_rgba(0,0,0,0.85)] mb-8">
+        <p className="sn-subtext text-[#FAF8F5] max-w-md drop-shadow-[0_1.5px_6px_rgba(0,0,0,0.85)] mb-8">
           Architectural safety for modern discerning homes.
         </p>
 

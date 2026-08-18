@@ -8,7 +8,7 @@ import { buildMetaTags } from "@/lib/seo";
 export const Route = createFileRoute("/sitemap")({
   head: () =>
     buildMetaTags({
-      title: "Site Directory & Architectural Safety Index",
+      title: `Site Directory & Architectural Safety Index — ${BRAND_CONFIG.name}`,
       description: `Complete directory of all ${BRAND_CONFIG.name} architectural safety services, category explorers, regional hubs, and customer care resources.`,
       canonicalPath: "/sitemap",
     }),
@@ -19,26 +19,26 @@ function SitemapPage() {
   const serviceList = Object.values(servicesData);
 
   return (
-    <div className="bg-[#050505] text-white min-h-screen flex flex-col">
+    <div className="bg-[#FAF8F5] text-[#1C1917] min-h-screen flex flex-col">
       <SiteNav />
 
       <main className="flex-1 max-w-6xl mx-auto px-6 md:px-12 pt-32 pb-24">
-        <header className="mb-12 pb-8 border-b border-white/10">
-          <p className="sn-eyebrow text-neutral-400 mb-3">
+        <header className="mb-12 pb-8 border-b border-[#1C1917]/10">
+          <p className="sn-eyebrow text-[#F37021] mb-3 font-medium">
             Index &amp; Navigation
           </p>
-          <h1 className="sn-h1 text-white">
+          <h1 className="sn-h1 text-[#1C1917]">
             Site Directory
           </h1>
-          <p className="sn-subtext text-neutral-400 mt-3">
+          <p className="sn-subtext text-[#78716C] mt-3">
             Comprehensive index of all public pages and architectural safety solutions.
           </p>
         </header>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-sm font-light">
           {/* Column 1: Services */}
-          <div>
-            <h2 className="text-xs uppercase tracking-widest font-normal text-white mb-6 pb-2 border-b border-white/10">
+          <div className="bg-white p-6 border border-[#1C1917]/8 shadow-sm">
+            <h2 className="text-xs uppercase tracking-widest font-medium text-[#1C1917] mb-6 pb-2 border-b border-[#1C1917]/10 text-[#F37021]">
               Safety Services ({serviceList.length})
             </h2>
             <ul className="space-y-3">
@@ -47,7 +47,7 @@ function SitemapPage() {
                   <Link
                     to="/service/$serviceId"
                     params={{ serviceId: s.id }}
-                    className="text-neutral-400 hover:text-white hover:underline underline-offset-4 transition-colors"
+                    className="text-[#44403C] hover:text-[#F37021] hover:underline underline-offset-4 transition-colors"
                   >
                     {s.title}
                   </Link>
@@ -57,15 +57,15 @@ function SitemapPage() {
           </div>
 
           {/* Column 2: Categories & Explorers */}
-          <div>
-            <h2 className="text-xs uppercase tracking-widest font-normal text-white mb-6 pb-2 border-b border-white/10">
+          <div className="bg-white p-6 border border-[#1C1917]/8 shadow-sm">
+            <h2 className="text-xs uppercase tracking-widest font-medium text-[#1C1917] mb-6 pb-2 border-b border-[#1C1917]/10 text-[#F37021]">
               Categories &amp; Solutions
             </h2>
             <ul className="space-y-3">
               <li>
                 <Link
                   to="/solutions"
-                  className="text-neutral-400 hover:text-white hover:underline underline-offset-4"
+                  className="text-[#44403C] hover:text-[#F37021] hover:underline underline-offset-4 transition-colors"
                 >
                   Solutions Overview
                 </Link>
@@ -74,7 +74,7 @@ function SitemapPage() {
                 <Link
                   to="/category/$categoryId"
                   params={{ categoryId: "invisible-grills" }}
-                  className="text-neutral-400 hover:text-white hover:underline underline-offset-4"
+                  className="text-[#44403C] hover:text-[#F37021] hover:underline underline-offset-4 transition-colors"
                 >
                   Invisible Grills
                 </Link>
@@ -83,7 +83,7 @@ function SitemapPage() {
                 <Link
                   to="/category/$categoryId"
                   params={{ categoryId: "core-safety-nets" }}
-                  className="text-neutral-400 hover:text-white hover:underline underline-offset-4"
+                  className="text-[#44403C] hover:text-[#F37021] hover:underline underline-offset-4 transition-colors"
                 >
                   Core Safety Nets
                 </Link>
@@ -92,7 +92,7 @@ function SitemapPage() {
                 <Link
                   to="/category/$categoryId"
                   params={{ categoryId: "construction-industrial" }}
-                  className="text-neutral-400 hover:text-white hover:underline underline-offset-4"
+                  className="text-[#44403C] hover:text-[#F37021] hover:underline underline-offset-4 transition-colors"
                 >
                   Construction &amp; Industrial
                 </Link>
@@ -101,7 +101,7 @@ function SitemapPage() {
                 <Link
                   to="/category/$categoryId"
                   params={{ categoryId: "animal-bird-protection" }}
-                  className="text-neutral-400 hover:text-white hover:underline underline-offset-4"
+                  className="text-[#44403C] hover:text-[#F37021] hover:underline underline-offset-4 transition-colors"
                 >
                   Animal &amp; Bird Protection
                 </Link>
@@ -110,21 +110,21 @@ function SitemapPage() {
                 <Link
                   to="/category/$categoryId"
                   params={{ categoryId: "specialty-solutions" }}
-                  className="text-neutral-400 hover:text-white hover:underline underline-offset-4"
+                  className="text-[#44403C] hover:text-[#F37021] hover:underline underline-offset-4 transition-colors"
                 >
                   Specialty Solutions
                 </Link>
               </li>
             </ul>
 
-            <h2 className="text-xs uppercase tracking-widest font-normal text-white mt-10 mb-6 pb-2 border-b border-white/10">
+            <h2 className="text-xs uppercase tracking-widest font-medium text-[#1C1917] mt-10 mb-6 pb-2 border-b border-[#1C1917]/10 text-[#F37021]">
               Regional Operations
             </h2>
             <ul className="space-y-3">
               <li>
                 <Link
                   to="/service-areas"
-                  className="text-neutral-300 hover:text-white hover:underline underline-offset-4 font-medium"
+                  className="text-[#1C1917] hover:text-[#F37021] hover:underline underline-offset-4 font-medium transition-colors"
                 >
                   Verified Service Areas →
                 </Link>
@@ -132,7 +132,7 @@ function SitemapPage() {
               <li>
                 <Link
                   to="/maintenance-repair"
-                  className="text-neutral-400 hover:text-white hover:underline underline-offset-4"
+                  className="text-[#44403C] hover:text-[#F37021] hover:underline underline-offset-4 transition-colors"
                 >
                   Care &amp; Maintenance Protocol
                 </Link>
@@ -141,15 +141,15 @@ function SitemapPage() {
           </div>
 
           {/* Column 3: Company & Legal */}
-          <div>
-            <h2 className="text-xs uppercase tracking-widest font-normal text-white mb-6 pb-2 border-b border-white/10">
+          <div className="bg-white p-6 border border-[#1C1917]/8 shadow-sm">
+            <h2 className="text-xs uppercase tracking-widest font-medium text-[#1C1917] mb-6 pb-2 border-b border-[#1C1917]/10 text-[#F37021]">
               Company &amp; Architecture
             </h2>
             <ul className="space-y-3">
               <li>
                 <Link
                   to="/our-story"
-                  className="text-neutral-400 hover:text-white hover:underline underline-offset-4"
+                  className="text-[#44403C] hover:text-[#F37021] hover:underline underline-offset-4 transition-colors"
                 >
                   Our Story
                 </Link>
@@ -157,7 +157,7 @@ function SitemapPage() {
               <li>
                 <Link
                   to="/craftsmanship"
-                  className="text-neutral-400 hover:text-white hover:underline underline-offset-4"
+                  className="text-[#44403C] hover:text-[#F37021] hover:underline underline-offset-4 transition-colors"
                 >
                   The Craftsmanship
                 </Link>
@@ -165,7 +165,7 @@ function SitemapPage() {
               <li>
                 <Link
                   to="/lifestyle"
-                  className="text-neutral-400 hover:text-white hover:underline underline-offset-4"
+                  className="text-[#44403C] hover:text-[#F37021] hover:underline underline-offset-4 transition-colors"
                 >
                   The Lifestyle
                 </Link>
@@ -173,21 +173,21 @@ function SitemapPage() {
               <li>
                 <Link
                   to="/consultation"
-                  className="text-neutral-400 hover:text-white hover:underline underline-offset-4"
+                  className="text-[#44403C] hover:text-[#F37021] hover:underline underline-offset-4 transition-colors"
                 >
                   Consultation &amp; Survey Booking
                 </Link>
               </li>
             </ul>
 
-            <h2 className="text-xs uppercase tracking-widest font-normal text-white mt-10 mb-6 pb-2 border-b border-white/10">
+            <h2 className="text-xs uppercase tracking-widest font-medium text-[#1C1917] mt-10 mb-6 pb-2 border-b border-[#1C1917]/10 text-[#F37021]">
               Customer Care &amp; Legal
             </h2>
             <ul className="space-y-3">
               <li>
                 <Link
                   to="/warranty"
-                  className="text-neutral-400 hover:text-white hover:underline underline-offset-4"
+                  className="text-[#44403C] hover:text-[#F37021] hover:underline underline-offset-4 transition-colors"
                 >
                   Warranty Policy &amp; Terms
                 </Link>
@@ -195,7 +195,7 @@ function SitemapPage() {
               <li>
                 <Link
                   to="/safety-faq"
-                  className="text-neutral-400 hover:text-white hover:underline underline-offset-4"
+                  className="text-[#44403C] hover:text-[#F37021] hover:underline underline-offset-4 transition-colors"
                 >
                   Safety &amp; Architecture FAQ
                 </Link>
@@ -203,7 +203,7 @@ function SitemapPage() {
               <li>
                 <Link
                   to="/material-standards"
-                  className="text-neutral-400 hover:text-white hover:underline underline-offset-4"
+                  className="text-[#44403C] hover:text-[#F37021] hover:underline underline-offset-4 transition-colors"
                 >
                   Material Standards
                 </Link>
@@ -211,7 +211,7 @@ function SitemapPage() {
               <li>
                 <Link
                   to="/terms"
-                  className="text-neutral-400 hover:text-white hover:underline underline-offset-4"
+                  className="text-[#44403C] hover:text-[#F37021] hover:underline underline-offset-4 transition-colors"
                 >
                   Terms &amp; Conditions
                 </Link>
@@ -219,7 +219,7 @@ function SitemapPage() {
               <li>
                 <Link
                   to="/privacy"
-                  className="text-neutral-400 hover:text-white hover:underline underline-offset-4"
+                  className="text-[#44403C] hover:text-[#F37021] hover:underline underline-offset-4 transition-colors"
                 >
                   Privacy &amp; Cookie Policy
                 </Link>
@@ -233,3 +233,5 @@ function SitemapPage() {
     </div>
   );
 }
+
+export default SitemapPage;

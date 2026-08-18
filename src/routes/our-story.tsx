@@ -8,7 +8,7 @@ import { buildMetaTags } from "@/lib/seo";
 export const Route = createFileRoute("/our-story")({
   head: () =>
     buildMetaTags({
-      title: "Genesis of Serenity — Atelier Heritage & Brand Ethos",
+      title: `Genesis of Serenity — Atelier Heritage & Brand Ethos | ${BRAND_CONFIG.name}`,
       description: `The story of ${BRAND_CONFIG.name} — 11 times of the day from dawn to midnight, invisible safety engineered to honor modern architectural living with quiet grace.`,
       canonicalPath: "/our-story",
       ogImage: "/images/our-story/chapter-1.jpg",
@@ -88,7 +88,7 @@ const CHAPTERS: Chapter[] = [
 ];
 
 const PHASES: { from: string; to: string; dark: boolean }[] = [
-  { from: "#CBD5E1", to: "#94A3B8", dark: false },
+  { from: "#F4EFEA", to: "#EAE3D9", dark: false },
   { from: "#FFEDD5", to: "#FDBA74", dark: false },
   { from: "#BAE6FD", to: "#38BDF8", dark: false },
   { from: "#E0F2FE", to: "#FFFFFF", dark: false },
@@ -97,9 +97,9 @@ const PHASES: { from: string; to: string; dark: boolean }[] = [
   { from: "#F97316", to: "#EF4444", dark: false },
   { from: "#818CF8", to: "#4338CA", dark: true },
   { from: "#312E81", to: "#1E1B4B", dark: true },
-  { from: "#111827", to: "#030712", dark: true },
-  { from: "#030712", to: "#000000", dark: true },
-  { from: "#030712", to: "#000000", dark: true },
+  { from: "#1C1917", to: "#141210", dark: true },
+  { from: "#1C1917", to: "#141210", dark: true },
+  { from: "#1C1917", to: "#141210", dark: true },
 ];
 
 function StoryPage() {
@@ -129,7 +129,6 @@ function StoryPage() {
   }, []);
 
   const phase = PHASES[Math.min(11, activeIndex)];
-  const isDark = phase.dark;
   const isMoon = activeIndex >= 7;
   const showStars = activeIndex >= 9;
 
@@ -150,52 +149,32 @@ function StoryPage() {
   );
 
   return (
-    <div className="relative h-screen w-screen overflow-hidden select-none">
-      {/* 1. Fixed Sky Gradient Canvas (Atmospheric Times of Day Realism) */}
+    <div className="relative h-screen w-screen overflow-hidden select-none bg-[#FAF8F5]">
+      {/* 1. Fixed Sky Gradient Canvas */}
       <div
         className="fixed inset-0 w-full h-full pointer-events-none z-0"
         style={{ background: `linear-gradient(to bottom, ${phase.from}, ${phase.to})` }}
         aria-hidden="true"
       />
 
-      {/* 2. God Rays — static, no spin */}
+      {/* 2. God Rays */}
       <div
-        className="w-[200vw] h-[200vh] fixed -top-1/2 -left-1/2 bg-gradient-to-b from-white/10 via-transparent to-transparent rotate-[45deg] origin-center mix-blend-overlay pointer-events-none z-0 opacity-30"
+        className="w-[200vw] h-[200vh] fixed -top-1/2 -left-1/2 bg-gradient-to-b from-white/20 via-transparent to-transparent rotate-[45deg] origin-center mix-blend-overlay pointer-events-none z-0 opacity-40"
         aria-hidden="true"
       />
 
-      {/* 3. Volumetric Clouds — static blurred radial gradients */}
-      <div
-        className="fixed inset-0 pointer-events-none z-0 opacity-70"
-        style={{
-          background:
-            "radial-gradient(ellipse 60% 30% at 20% 40%, rgba(255,255,255,0.55), transparent 70%), radial-gradient(ellipse 50% 25% at 75% 60%, rgba(255,255,255,0.4), transparent 70%)",
-          filter: "blur(8px)",
-        }}
-        aria-hidden="true"
-      />
-      <div
-        className="fixed inset-0 pointer-events-none z-0 opacity-60"
-        style={{
-          background:
-            "radial-gradient(ellipse 45% 22% at 55% 30%, rgba(255,255,255,0.55), transparent 70%), radial-gradient(ellipse 40% 20% at 25% 75%, rgba(255,255,255,0.45), transparent 70%)",
-          filter: "blur(10px)",
-        }}
-        aria-hidden="true"
-      />
-
-      {/* 4. Celestial Orb — static position per scroll section */}
+      {/* 3. Celestial Orb */}
       <div
         className={`fixed pointer-events-none z-0 rounded-full ${
           isMoon
             ? "w-20 h-20 bg-slate-200 blur-2xl opacity-50"
-            : "w-28 h-28 bg-yellow-100 blur-3xl opacity-60"
+            : "w-28 h-28 bg-[#F37021]/30 blur-3xl opacity-60"
         }`}
         style={{ left: `${orbX}vw`, top: `${orbY}vh` }}
         aria-hidden="true"
       />
 
-      {/* 5. Stars — static dots, no pulse */}
+      {/* 4. Stars */}
       {showStars && (
         <div className="fixed inset-0 pointer-events-none z-0" aria-hidden="true">
           {stars.map((s, i) => (
@@ -211,50 +190,50 @@ function StoryPage() {
         </div>
       )}
 
-      {/* 6. Sticky Site Navigation */}
+      {/* 5. Sticky Site Navigation */}
       <div className="fixed top-0 left-0 right-0 z-40">
         <SiteNav />
       </div>
 
-      {/* 7. Scroll-snap Container for 11 Times of Day */}
+      {/* 6. Scroll-snap Container for 11 Times of Day */}
       <div
         ref={containerRef}
         className="h-screen w-screen overflow-y-scroll snap-y snap-mandatory relative z-10 bg-transparent"
       >
-        {CHAPTERS.map((c, i) => {
+        {CHAPTERS.map((c) => {
           return (
             <section
               key={c.name}
               className="w-screen h-screen snap-start relative flex items-center justify-center overflow-hidden bg-transparent p-4 sm:p-6"
             >
-              <div className="border border-white/30 bg-black/25 backdrop-blur-xl p-6 sm:p-8 md:p-10 w-full max-w-sm sm:max-w-md md:max-w-lg flex flex-col items-center justify-center shadow-2xl">
+              <div className="border border-white/40 bg-[#FAF8F5]/85 backdrop-blur-2xl p-6 sm:p-8 md:p-10 w-full max-w-sm sm:max-w-md md:max-w-lg flex flex-col items-center justify-center shadow-2xl">
                 {/* Visual Card Image */}
-                <div className="w-full h-56 sm:h-64 md:h-72 overflow-hidden border border-white/20 mb-5 relative">
+                <div className="w-full h-56 sm:h-64 md:h-72 overflow-hidden border border-[#1C1917]/10 mb-5 relative shadow-sm">
                   <img
                     src={c.image}
                     alt={`${c.name} — ${c.time} atmospheric safety setting`}
                     className="w-full h-full object-cover"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#1C1917]/40 via-transparent to-transparent pointer-events-none" />
                 </div>
 
                 {/* Time Indicator */}
                 <p
-                  className="text-[10px] sm:text-[11px] uppercase tracking-[0.3em] font-light text-neutral-200"
+                  className="text-[10px] sm:text-[11px] uppercase tracking-[0.3em] font-medium text-[#F37021]"
                   style={{ fontFamily: "'Inter', sans-serif" }}
                 >
                   {c.time}
                 </p>
 
                 {/* Chapter / Phase Title */}
-                <h2 className="font-serif uppercase text-xl sm:text-2xl font-light text-center mt-1.5 text-white tracking-[0.18em]">
+                <h2 className="font-serif uppercase text-xl sm:text-2xl font-light text-center mt-1.5 text-[#1C1917] tracking-[0.18em]">
                   {c.name}
                 </h2>
 
                 {/* Narrative Copy */}
                 <p
-                  className="text-[12px] sm:text-[13px] text-center mt-2.5 font-light max-w-xs leading-relaxed text-neutral-200"
+                  className="text-[12px] sm:text-[13px] text-center mt-2.5 font-light max-w-xs leading-relaxed text-[#44403C]"
                   style={{ fontFamily: "'Inter', sans-serif" }}
                 >
                   {c.copy}
@@ -266,14 +245,14 @@ function StoryPage() {
 
         <section className="w-screen min-h-screen snap-start relative flex flex-col items-center justify-between overflow-hidden bg-transparent">
           <div className="flex-1 flex items-center justify-center w-full pt-28 pb-12 px-6">
-            <div className="border border-white/30 bg-black/35 backdrop-blur-xl p-8 sm:p-10 md:p-14 w-full max-w-sm sm:max-w-md flex flex-col items-center shadow-2xl">
-              <span className="sn-eyebrow text-neutral-300 mb-3 block">
+            <div className="border border-[#1C1917]/10 bg-white/95 backdrop-blur-2xl p-8 sm:p-10 md:p-14 w-full max-w-sm sm:max-w-md flex flex-col items-center shadow-2xl">
+              <span className="sn-eyebrow text-[#F37021] mb-3 block font-medium">
                 Genesis of Serenity
               </span>
-              <h3 className="font-serif uppercase text-2xl font-light text-center text-white tracking-[0.18em]">
+              <h3 className="font-serif uppercase text-2xl font-light text-center text-[#1C1917] tracking-[0.18em]">
                 Curate Your Sanctuary
               </h3>
-              <p className="text-xs text-neutral-300 text-center font-light mt-3 mb-8 leading-relaxed max-w-xs">
+              <p className="text-xs text-[#44403C] text-center font-light mt-3 mb-8 leading-relaxed max-w-xs">
                 From dawn to midnight, preserve your sanctuary with invisible architectural grace.
               </p>
               <Link
@@ -284,7 +263,7 @@ function StoryPage() {
               </Link>
             </div>
           </div>
-          <div className="w-full relative z-20 bg-[#050505]">
+          <div className="w-full relative z-20">
             <Footer />
           </div>
         </section>
@@ -293,7 +272,7 @@ function StoryPage() {
       {/* Scroll Hint */}
       {activeIndex === 0 && (
         <div
-          className="fixed bottom-6 left-1/2 -translate-x-1/2 text-[9px] uppercase tracking-[0.35em] opacity-60 pointer-events-none z-30 font-light text-white"
+          className="fixed bottom-6 left-1/2 -translate-x-1/2 text-[9px] uppercase tracking-[0.35em] opacity-75 pointer-events-none z-30 font-medium text-[#1C1917]"
           style={{ fontFamily: "'Inter', sans-serif" }}
         >
           Scroll to Begin

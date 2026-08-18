@@ -9,16 +9,16 @@ import { buildMetaTags } from "@/lib/seo";
 export const Route = createFileRoute("/safety-faq")({
   head: () =>
     buildMetaTags({
-      title: "Safety, Materials & Engineering FAQ",
+      title: `Safety, Materials & Engineering FAQ — ${BRAND_CONFIG.name}`,
       description:
-        "Frequently asked questions about SafeNest invisible grills, safety netting systems, load capacities, emergency egress, and installation.",
+        `Frequently asked questions about ${BRAND_CONFIG.name} invisible grills, safety netting systems, load capacities, emergency egress, and installation.`,
       canonicalPath: "/safety-faq",
       jsonLd: {
         "@context": "https://schema.org",
         "@type": "WebPage",
         name: "Safety & Architectural FAQ",
         description:
-          "Official questions and answers regarding SafeNest architectural fall-prevention systems.",
+          `Official questions and answers regarding ${BRAND_CONFIG.name} architectural fall-prevention systems.`,
         publisher: {
           "@type": "Organization",
           name: BRAND_CONFIG.name,
@@ -35,11 +35,11 @@ const FAQ_SECTIONS = [
     questions: [
       {
         q: "What are invisible grills made of?",
-        a: "SafeNest invisible grills use high-tensile AISI 316 marine-grade austenitic stainless steel wire rope (7x7 or 7x19 construction) wrapped in a transparent, UV-stabilized virgin Nylon-12 protective sheath. The cables are anchored into extruded 6063-T6 architectural aluminum tracks.",
+        a: "AMR Enterprises invisible grills use high-tensile AISI 316 marine-grade austenitic stainless steel wire rope (7x7 or 7x19 construction) wrapped in a transparent, UV-stabilized virgin Nylon-12 protective sheath. The cables are anchored into extruded 6063-T6 architectural aluminum tracks.",
       },
       {
         q: "Can invisible grills be breached or cut in a fire emergency?",
-        a: "Yes. Unlike heavy fixed wrought iron grates that trap occupants and firefighters during building fires, SafeNest stainless steel cables can be severed in seconds using standard heavy-duty wire cutters for rapid emergency egress.",
+        a: "Yes. Unlike heavy fixed wrought iron grates that trap occupants and firefighters during building fires, AMR Enterprises stainless steel cables can be severed in seconds using standard heavy-duty wire cutters for rapid emergency egress.",
       },
       {
         q: "Will the cables rust or turn yellow from tropical sun exposure?",
@@ -99,19 +99,19 @@ function SafetyFaqPage() {
   };
 
   return (
-    <div className="bg-[#050505] text-white min-h-screen">
+    <div className="bg-[#FAF8F5] text-[#1C1917] min-h-screen">
       <SiteNav />
 
       {/* Hero */}
-      <section className="relative w-full pt-32 pb-16 md:pt-40 md:pb-24 px-6 md:px-12 bg-[#050505] border-b border-white/10">
+      <section className="relative w-full pt-32 pb-16 md:pt-40 md:pb-24 px-6 md:px-12 bg-[#FAF8F5] border-b border-[#1C1917]/10">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="sn-eyebrow text-neutral-400 mb-4">
+          <p className="sn-eyebrow text-[#F37021] mb-4 font-medium">
             Engineering Knowledge
           </p>
-          <h1 className="sn-h1 text-white mb-4">
+          <h1 className="sn-h1 text-[#1C1917] mb-4">
             Safety, Materials &amp; Architecture FAQ
           </h1>
-          <p className="sn-subtext text-neutral-300 max-w-2xl mx-auto">
+          <p className="sn-subtext text-[#44403C] max-w-2xl mx-auto">
             Clear, factual answers regarding materials, tensile behavior, emergency egress,
             warranties, and on-site installation processes.
           </p>
@@ -121,11 +121,11 @@ function SafetyFaqPage() {
       {/* FAQ Accordions */}
       <main className="max-w-4xl mx-auto px-6 md:px-12 py-16 md:py-24 space-y-16">
         {FAQ_SECTIONS.map((sec, secIdx) => (
-          <section key={sec.category} className="border-b border-white/10 pb-12">
-            <span className="text-[10px] font-mono tracking-widest text-neutral-400 uppercase">
+          <section key={sec.category} className="border-b border-[#1C1917]/10 pb-12">
+            <span className="text-[10px] font-mono tracking-widest text-[#F37021] uppercase font-medium">
               Category 0{secIdx + 1}
             </span>
-            <h2 className="font-serif text-2xl font-light text-white uppercase tracking-wide mt-1 mb-8">
+            <h2 className="font-serif text-2xl font-light text-[#1C1917] uppercase tracking-wide mt-1 mb-8">
               {sec.category}
             </h2>
 
@@ -134,21 +134,21 @@ function SafetyFaqPage() {
                 const key = `${secIdx}-${faqIdx}`;
                 const isOpen = !!openItems[key];
                 return (
-                  <div key={faq.q} className="border border-white/10 bg-white/[0.02]">
+                  <div key={faq.q} className="border border-[#1C1917]/10 bg-white shadow-sm">
                     <button
                       type="button"
                       onClick={() => toggleItem(key)}
                       aria-expanded={isOpen}
-                      className="w-full p-6 text-left flex items-center justify-between gap-4 font-serif text-base md:text-lg font-light text-white hover:bg-white/[0.04] transition-colors focus-ring min-h-11"
+                      className="w-full p-6 text-left flex items-center justify-between gap-4 font-serif text-base md:text-lg font-light text-[#1C1917] hover:bg-[#FAF8F5] transition-colors focus-ring min-h-11 cursor-pointer"
                     >
                       <span>{faq.q}</span>
-                      <span className="text-xl font-light text-neutral-400 shrink-0">
+                      <span className="text-xl font-light text-[#F37021] shrink-0">
                         {isOpen ? "−" : "+"}
                       </span>
                     </button>
 
                     {isOpen && (
-                      <div className="px-6 pb-6 pt-2 text-xs md:text-sm text-neutral-300 font-light leading-relaxed border-t border-white/10 bg-white/[0.01]">
+                      <div className="px-6 pb-6 pt-2 text-xs md:text-sm text-[#44403C] font-light leading-relaxed border-t border-[#1C1917]/8 bg-[#FAF8F5]/50">
                         {faq.a}
                       </div>
                     )}
@@ -161,10 +161,10 @@ function SafetyFaqPage() {
 
         {/* Still have questions */}
         <div className="text-center pt-8">
-          <h3 className="font-serif text-xl font-light text-white uppercase tracking-wider mb-3">
+          <h3 className="font-serif text-xl font-light text-[#1C1917] uppercase tracking-wider mb-3">
             Have a Specific Architectural Query?
           </h3>
-          <p className="text-xs text-neutral-400 font-light mb-6">
+          <p className="text-xs text-[#78716C] font-light mb-6">
             Our regional safety advisors are available to review architectural drawings and site
             plans.
           </p>
@@ -182,3 +182,5 @@ function SafetyFaqPage() {
     </div>
   );
 }
+
+export default SafetyFaqPage;

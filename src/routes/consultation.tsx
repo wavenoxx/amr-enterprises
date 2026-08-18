@@ -12,7 +12,7 @@ import { Check, ArrowRight, Phone, MessageSquare } from "lucide-react";
 export const Route = createFileRoute("/consultation")({
   head: () =>
     buildMetaTags({
-      title: "Private Site Survey — SafeNest Architectural Safety",
+      title: `Private Site Survey — ${BRAND_CONFIG.name}`,
       description: `Schedule a complimentary on-site laser measurement and architectural safety evaluation with ${BRAND_CONFIG.name}. Transparent specification and certified technical installation.`,
       canonicalPath: "/consultation",
       noIndex: true,
@@ -160,7 +160,7 @@ function ConsultationPage() {
   };
 
   return (
-    <div className="bg-[#050505] text-white min-h-screen flex flex-col selection:bg-white/20">
+    <div className="bg-[#FAF8F5] text-[#1C1917] min-h-screen flex flex-col selection:bg-[#F37021]/20">
       <SiteNav />
 
       <main className="flex-1 max-w-4xl mx-auto px-6 md:px-12 pt-32 sm:pt-36 pb-28 w-full">
@@ -168,25 +168,25 @@ function ConsultationPage() {
             SUCCESS STATE (Serene Architectural Confirmation)
             ───────────────────────────────────────────────────────────── */}
         {successReference ? (
-          <div className="text-center py-16 sm:py-24 max-w-2xl mx-auto sn-black-visual border border-white/10 p-8 sm:p-14">
-            <span className="sn-eyebrow text-neutral-400 mb-3 block">
+          <div className="text-center py-16 sm:py-24 max-w-2xl mx-auto bg-white border border-[#1C1917]/10 p-8 sm:p-14 shadow-xl">
+            <span className="sn-eyebrow text-[#F37021] mb-3 block font-medium">
               Survey Commissioned
             </span>
-            <h1 className="sn-h1 text-white mb-4">
+            <h1 className="sn-h1 text-[#1C1917] mb-4">
               Sanctuary Survey Registered
             </h1>
-            <p className="sn-subtext text-neutral-300 max-w-md mx-auto mb-6">
-              Thank you, <span className="text-white font-normal">{successReference.name}</span>.
+            <p className="sn-subtext text-[#44403C] max-w-md mx-auto mb-6">
+              Thank you, <span className="text-[#1C1917] font-semibold">{successReference.name}</span>.
               Your request has been logged in our regional engineering ledger.
             </p>
 
-            <div className="inline-block border border-white/15 bg-white/5 px-5 py-2.5 mb-8">
-              <span className="font-mono text-xs text-neutral-400 tracking-widest uppercase">
-                Reference: <span className="text-white">{successReference.id.slice(0, 8).toUpperCase()}</span>
+            <div className="inline-block border border-[#F37021]/30 bg-[#F37021]/8 px-5 py-2.5 mb-8">
+              <span className="font-mono text-xs text-[#1C1917] tracking-widest uppercase">
+                Reference: <span className="text-[#F37021] font-medium">{successReference.id.slice(0, 8).toUpperCase()}</span>
               </span>
             </div>
 
-            <p className="text-xs font-light text-neutral-400 max-w-md mx-auto mb-10 leading-relaxed">
+            <p className="text-xs font-light text-[#78716C] max-w-md mx-auto mb-10 leading-relaxed">
               A certified {BRAND_CONFIG.name} technical safety advisor will coordinate with you to
               confirm laser measurement timing and exact site access.
             </p>
@@ -205,19 +205,19 @@ function ConsultationPage() {
               <a
                 href={`tel:${BRAND_CONFIG.contact.phoneDial}`}
                 onClick={() => trackEngagement("phone", "survey_success")}
-                className="sn-btn-luxury w-full sm:w-auto"
+                className="sn-btn-luxury-dark w-full sm:w-auto"
               >
                 <Phone size={13} className="mr-2" />
                 Call Atelier Desk
               </a>
             </div>
 
-            <div className="mt-12 pt-8 border-t border-white/10">
+            <div className="mt-12 pt-8 border-t border-[#1C1917]/10">
               <Link
                 to="/"
-                className="text-[10px] uppercase tracking-[0.25em] font-light text-neutral-400 hover:text-white transition-colors"
+                className="text-[10px] uppercase tracking-[0.25em] font-medium text-[#78716C] hover:text-[#F37021] transition-colors"
               >
-                ← Return to SafeNest House
+                ← Return to {BRAND_CONFIG.name} House
               </Link>
             </div>
           </div>
@@ -228,13 +228,13 @@ function ConsultationPage() {
           <div className="w-full">
             {/* Header / Editorial Intro */}
             <div className="text-center max-w-2xl mx-auto mb-16 sm:mb-20">
-              <span className="sn-eyebrow text-neutral-400 mb-3 block">
+              <span className="sn-eyebrow text-[#F37021] mb-3 block font-medium">
                 Private Commission
               </span>
-              <h1 className="sn-h1 text-white mb-3">
+              <h1 className="sn-h1 text-[#1C1917] mb-3">
                 The Private Site Survey
               </h1>
-              <p className="sn-subtext text-neutral-300 max-w-lg mx-auto">
+              <p className="sn-subtext text-[#44403C] max-w-lg mx-auto">
                 Complimentary digital laser calibration, structural anchorage evaluation, and
                 architectural specification across South India.
               </p>
@@ -243,16 +243,16 @@ function ConsultationPage() {
             <form onSubmit={handleSubmit} className="space-y-16">
               {/* SECTION 01: SERVICE SELECTION */}
               <section className="space-y-6">
-                <div className="border-b border-white/10 pb-4 flex items-baseline justify-between">
+                <div className="border-b border-[#1C1917]/10 pb-4 flex items-baseline justify-between">
                   <div>
-                    <span className="text-[9px] font-mono tracking-widest text-neutral-400 uppercase block mb-1">
+                    <span className="text-[9px] font-mono tracking-widest text-[#F37021] uppercase block mb-1 font-medium">
                       01 / Sanctuary Specification
                     </span>
-                    <h2 className="font-serif text-lg md:text-xl font-light text-white uppercase tracking-wider">
+                    <h2 className="font-serif text-lg md:text-xl font-light text-[#1C1917] uppercase tracking-wider">
                       Select Architectural Solutions
                     </h2>
                   </div>
-                  <span className="text-[10px] text-neutral-400 font-light tracking-wide">
+                  <span className="text-[10px] text-[#78716C] font-light tracking-wide">
                     {selectedServices.length} selected
                   </span>
                 </div>
@@ -267,21 +267,21 @@ function ConsultationPage() {
                         onClick={() => toggleService(srv.id)}
                         className={`flex items-center justify-between p-4 text-left transition-all duration-300 cursor-pointer border ${
                           isSelected
-                            ? "bg-white/10 border-white text-white shadow-xs"
-                            : "bg-white/[0.02] border-white/10 text-neutral-300 hover:border-white/30 hover:bg-white/[0.04]"
+                            ? "bg-[#F37021]/8 border-[#F37021] text-[#1C1917] shadow-sm"
+                            : "bg-white border-[#1C1917]/10 text-[#44403C] hover:border-[#F37021]/50 hover:shadow-xs"
                         }`}
                       >
                         <div>
-                          <span className="text-[9px] font-mono tracking-widest text-neutral-400 uppercase block">
+                          <span className="text-[9px] font-mono tracking-widest text-[#F37021] uppercase block font-medium">
                             {srv.category}
                           </span>
-                          <span className="font-serif text-sm font-light text-white tracking-wide mt-0.5 block">
+                          <span className="font-serif text-sm font-light text-[#1C1917] tracking-wide mt-0.5 block">
                             {srv.name}
                           </span>
                         </div>
                         <div
                           className={`w-5 h-5 rounded-full border flex items-center justify-center transition-colors ${
-                            isSelected ? "border-white bg-white text-black" : "border-white/25 bg-transparent"
+                            isSelected ? "border-[#F37021] bg-[#F37021] text-white" : "border-[#1C1917]/25 bg-transparent"
                           }`}
                         >
                           {isSelected && <Check size={11} strokeWidth={2.5} />}
@@ -294,11 +294,11 @@ function ConsultationPage() {
 
               {/* SECTION 02: LOCATION & SANCTUARY CONTACT */}
               <section className="space-y-6">
-                <div className="border-b border-white/10 pb-4">
-                  <span className="text-[9px] font-mono tracking-widest text-neutral-400 uppercase block mb-1">
+                <div className="border-b border-[#1C1917]/10 pb-4">
+                  <span className="text-[9px] font-mono tracking-widest text-[#F37021] uppercase block mb-1 font-medium">
                     02 / Location &amp; Contact
                   </span>
-                  <h2 className="font-serif text-lg md:text-xl font-light text-white uppercase tracking-wider">
+                  <h2 className="font-serif text-lg md:text-xl font-light text-[#1C1917] uppercase tracking-wider">
                     Site Details &amp; Client Ledger
                   </h2>
                 </div>
@@ -308,9 +308,9 @@ function ConsultationPage() {
                   <div className="space-y-2">
                     <label
                       htmlFor="pincode"
-                      className="text-[10px] uppercase tracking-[0.2em] font-light text-neutral-400 block"
+                      className="text-[10px] uppercase tracking-[0.2em] font-medium text-[#78716C] block"
                     >
-                      Pincode <span className="text-neutral-500">*</span>
+                      Pincode <span className="text-[#F37021]">*</span>
                     </label>
                     <input
                       id="pincode"
@@ -322,7 +322,7 @@ function ConsultationPage() {
                       placeholder="e.g. 500033"
                       autoComplete="postal-code"
                       required
-                      className="w-full bg-white/[0.03] border border-white/15 px-4 py-3 text-sm text-white placeholder:text-neutral-600 focus:border-white focus:outline-none transition-colors"
+                      className="w-full bg-white border border-[#1C1917]/15 px-4 py-3 text-sm text-[#1C1917] placeholder:text-[#A8A29E] focus:border-[#F37021] focus:outline-none transition-colors"
                     />
                   </div>
 
@@ -330,9 +330,9 @@ function ConsultationPage() {
                   <div className="space-y-2">
                     <label
                       htmlFor="localityCity"
-                      className="text-[10px] uppercase tracking-[0.2em] font-light text-neutral-400 block"
+                      className="text-[10px] uppercase tracking-[0.2em] font-medium text-[#78716C] block"
                     >
-                      Locality &amp; City <span className="text-neutral-500">*</span>
+                      Locality &amp; City <span className="text-[#F37021]">*</span>
                     </label>
                     <input
                       id="localityCity"
@@ -342,7 +342,7 @@ function ConsultationPage() {
                       placeholder="e.g. Jubilee Hills, Hyderabad"
                       autoComplete="address-level2"
                       required
-                      className="w-full bg-white/[0.03] border border-white/15 px-4 py-3 text-sm text-white placeholder:text-neutral-600 focus:border-white focus:outline-none transition-colors"
+                      className="w-full bg-white border border-[#1C1917]/15 px-4 py-3 text-sm text-[#1C1917] placeholder:text-[#A8A29E] focus:border-[#F37021] focus:outline-none transition-colors"
                     />
                   </div>
 
@@ -350,12 +350,12 @@ function ConsultationPage() {
                   <div className="space-y-2">
                     <label
                       htmlFor="phone"
-                      className="text-[10px] uppercase tracking-[0.2em] font-light text-neutral-400 block"
+                      className="text-[10px] uppercase tracking-[0.2em] font-medium text-[#78716C] block"
                     >
-                      Mobile Number <span className="text-neutral-500">*</span>
+                      Mobile Number <span className="text-[#F37021]">*</span>
                     </label>
                     <div className="relative flex items-center">
-                      <span className="absolute left-4 text-sm font-light text-neutral-400">
+                      <span className="absolute left-4 text-sm font-medium text-[#78716C]">
                         +91
                       </span>
                       <input
@@ -368,7 +368,7 @@ function ConsultationPage() {
                         placeholder="98765 43210"
                         autoComplete="tel-national"
                         required
-                        className="w-full bg-white/[0.03] border border-white/15 pl-14 pr-4 py-3 text-sm text-white placeholder:text-neutral-600 focus:border-white focus:outline-none transition-colors"
+                        className="w-full bg-white border border-[#1C1917]/15 pl-14 pr-4 py-3 text-sm text-[#1C1917] placeholder:text-[#A8A29E] focus:border-[#F37021] focus:outline-none transition-colors"
                       />
                     </div>
                   </div>
@@ -377,9 +377,9 @@ function ConsultationPage() {
                   <div className="space-y-2">
                     <label
                       htmlFor="fullName"
-                      className="text-[10px] uppercase tracking-[0.2em] font-light text-neutral-400 block"
+                      className="text-[10px] uppercase tracking-[0.2em] font-medium text-[#78716C] block"
                     >
-                      Client Name <span className="text-neutral-500">*</span>
+                      Client Name <span className="text-[#F37021]">*</span>
                     </label>
                     <input
                       id="fullName"
@@ -389,7 +389,7 @@ function ConsultationPage() {
                       placeholder="e.g. Anand Varma"
                       autoComplete="name"
                       required
-                      className="w-full bg-white/[0.03] border border-white/15 px-4 py-3 text-sm text-white placeholder:text-neutral-600 focus:border-white focus:outline-none transition-colors"
+                      className="w-full bg-white border border-[#1C1917]/15 px-4 py-3 text-sm text-[#1C1917] placeholder:text-[#A8A29E] focus:border-[#F37021] focus:outline-none transition-colors"
                     />
                   </div>
                 </div>
@@ -398,9 +398,9 @@ function ConsultationPage() {
                 <div className="space-y-2 pt-2">
                   <label
                     htmlFor="notes"
-                    className="text-[10px] uppercase tracking-[0.2em] font-light text-neutral-400 block"
+                    className="text-[10px] uppercase tracking-[0.2em] font-medium text-[#78716C] block"
                   >
-                    Architectural Notes / Specific Openings <span className="text-neutral-600">(Optional)</span>
+                    Architectural Notes / Specific Openings <span className="text-[#A8A29E] font-normal">(Optional)</span>
                   </label>
                   <textarea
                     id="notes"
@@ -408,24 +408,24 @@ function ConsultationPage() {
                     value={notes}
                     onChange={(e) => setNotes(e.target.value)}
                     placeholder="e.g. 14th-floor balcony with curved railing, master bedroom french windows, child safety requirements."
-                    className="w-full bg-white/[0.03] border border-white/15 px-4 py-3 text-sm text-white placeholder:text-neutral-600 focus:border-white focus:outline-none transition-colors resize-none"
+                    className="w-full bg-white border border-[#1C1917]/15 px-4 py-3 text-sm text-[#1C1917] placeholder:text-[#A8A29E] focus:border-[#F37021] focus:outline-none transition-colors resize-none"
                   />
                 </div>
               </section>
 
               {/* SECTION 03: DISCRETION & CONSENT */}
-              <section className="space-y-6 pt-4 border-t border-white/10">
+              <section className="space-y-6 pt-4 border-t border-[#1C1917]/10">
                 <label className="flex items-start gap-3 cursor-pointer group select-none">
                   <input
                     type="checkbox"
                     checked={agreedToConsent}
                     onChange={(e) => setAgreedToConsent(e.target.checked)}
-                    className="mt-0.5 accent-white rounded-none cursor-pointer"
+                    className="mt-0.5 accent-[#F37021] rounded-none cursor-pointer"
                   />
-                  <span className="text-[11.5px] font-light text-neutral-400 leading-relaxed">
+                  <span className="text-[11.5px] font-light text-[#78716C] leading-relaxed">
                     I agree to be contacted via phone or WhatsApp by a certified {BRAND_CONFIG.name} technical
                     advisor strictly regarding this site measurement, in accordance with the{" "}
-                    <Link to="/privacy" className="text-white underline underline-offset-4 hover:opacity-80">
+                    <Link to="/privacy" className="text-[#1C1917] underline underline-offset-4 hover:text-[#F37021]">
                       Privacy Policy
                     </Link>
                     .
@@ -433,14 +433,14 @@ function ConsultationPage() {
                 </label>
 
                 {errorMessage && (
-                  <div className="p-4 border border-red-500/40 bg-red-950/20 text-red-300 text-xs font-light">
+                  <div className="p-4 border border-red-500/40 bg-red-50 text-red-700 text-xs font-medium">
                     {errorMessage}
                   </div>
                 )}
 
                 {/* Submit Action */}
                 <div className="pt-4 flex flex-col sm:flex-row items-center justify-between gap-6">
-                  <p className="text-[11px] font-light text-neutral-500">
+                  <p className="text-[11px] font-light text-[#78716C]">
                     Complimentary evaluation · Zero sales pressure · Direct engineering estimate
                   </p>
                   <button
