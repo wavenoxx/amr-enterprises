@@ -95,7 +95,8 @@ export function ProofSection({ categorySlug }: ProofSectionProps) {
             </h3>
             <p className="text-xs text-[#44403C] font-light leading-relaxed">
               Direct master installers and safety advisors serving residential communities and
-              commercial estates across Hyderabad, Bengaluru, Chennai, Kochi, and Visakhapatnam.
+              commercial estates across 7 primary hubs in Telangana &amp; Andhra Pradesh: Hyderabad,
+              Visakhapatnam, Vijayawada, Amaravati, Tirupati, Warangal, and Hanamkonda.
             </p>
             <Link
               to="/service-areas"

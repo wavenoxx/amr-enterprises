@@ -46,8 +46,8 @@ function MaterialStandardsPage() {
                 standard 304 stainless steel.
               </p>
               <p className="text-xs text-[#78716C]">
-                Ideal for high-humidity coastal and urban environments including Hyderabad,
-                Bengaluru, Chennai, Visakhapatnam, and Kochi.
+                Ideal for high-humidity coastal and urban environments across Telangana &amp; Andhra Pradesh,
+                including Hyderabad, Visakhapatnam, Vijayawada, Amaravati, Tirupati, Warangal, and Hanamkonda.
               </p>
             </div>
           </div>

@@ -41,7 +41,7 @@ export function trackEngagement(
       });
     }
   } catch (err) {
-    console.warn("[SafeNest Analytics] Engagement tracking notice:", err);
+    console.warn("[AMR Analytics] Engagement tracking notice:", err);
   }
 }
 

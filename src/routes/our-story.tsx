@@ -22,7 +22,7 @@ const CHAPTERS: Chapter[] = [
   {
     time: "05:00",
     name: "Dawn",
-    copy: "A silent guardian wakes. Before the first light touches South India, your sanctuary is secured.",
+    copy: "A silent guardian wakes. Before the first light touches Telangana and Andhra Pradesh, your sanctuary is secured.",
     image: "/images/our-story/chapter-1.jpg",
   },
   {

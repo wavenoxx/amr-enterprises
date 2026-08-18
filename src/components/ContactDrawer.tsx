@@ -200,8 +200,8 @@ export function ContactDrawer({ isOpen, onClose }: ContactDrawerProps) {
               Verified Operational Hubs
             </h3>
             <p className="text-xs text-[#78716C] leading-relaxed font-light mb-4">
-              Direct master technicians deployed across Hyderabad, Bengaluru, Chennai, Kochi, and
-              Visakhapatnam.
+              Direct master technicians deployed across 7 primary hubs in Telangana &amp; Andhra Pradesh:
+              Hyderabad, Visakhapatnam, Vijayawada, Amaravati, Tirupati, Warangal, and Hanamkonda.
             </p>
             <Link
               to="/service-areas"

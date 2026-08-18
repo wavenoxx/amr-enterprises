@@ -21,7 +21,7 @@ const ledger = [
   {
     eyebrow: "01 — AISI 316 Marine Grade Stainless Steel Core",
     title: "The Core",
-    copy: "The spine of our system. We utilize AISI 316-grade marine stainless steel, alloyed with molybdenum for superior rust resistance. This alloy resists corrosion in highly humid and coastal environments across South India, ensuring long-term structural integrity.",
+    copy: "The spine of our system. We utilize AISI 316-grade marine stainless steel, alloyed with molybdenum for superior rust resistance. This alloy resists corrosion in highly humid and coastal environments across Telangana & Andhra Pradesh, ensuring long-term structural integrity.",
   },
   {
     eyebrow: "02 — Nylon-12 Protective Shield",

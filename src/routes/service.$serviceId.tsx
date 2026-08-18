@@ -29,11 +29,11 @@ export const Route = createFileRoute("/service/$serviceId")({
           provider: {
             "@type": "Organization",
             name: BRAND_CONFIG.name,
-            url: "https://safenestindia.com",
+            url: "https://amrenterprises.com",
           },
           areaServed: {
             "@type": "AdministrativeArea",
-            name: "South India",
+            name: "Telangana & Andhra Pradesh",
           },
           description: s.description,
         }
@@ -46,7 +46,7 @@ export const Route = createFileRoute("/service/$serviceId")({
         "@type": "ListItem",
         position: idx + 1,
         name: crumb.name,
-        item: `https://safenestindia.com${crumb.path}`,
+        item: `https://amrenterprises.com${crumb.path}`,
       })),
     };
 

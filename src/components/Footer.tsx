@@ -328,9 +328,10 @@ export function Footer() {
               <p className="font-serif italic text-base md:text-lg text-[#E7E5E4] font-light leading-relaxed">
                 "The art of architectural protection — securing your sanctuary with quiet elegance."
               </p>
-              <p className="mt-2 text-[10px] tracking-[0.22em] uppercase text-[#A8A29E] font-light">
-                Hyderabad · Vizag · Vijayawada · Amaravati · Tirupati · Warangal · Hanamkonda
-              </p>
+              <div className="mt-2.5 flex flex-col md:items-end gap-0.5 text-[9.5px] sm:text-[10px] tracking-[0.16em] uppercase text-[#A8A29E] font-light">
+                <span>Telangana: Hyderabad · Warangal · Hanamkonda</span>
+                <span>Andhra Pradesh: Vizag · Vijayawada · Amaravati · Tirupati</span>
+              </div>
             </div>
           </div>
         </div>

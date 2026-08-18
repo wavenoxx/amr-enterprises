@@ -15,11 +15,11 @@ export interface PageSeoConfig {
  * for TanStack Router route head definitions.
  */
 export function buildMetaTags(config: PageSeoConfig) {
-  const canonicalUrl = `https://safenestindia.com${config.canonicalPath ?? ""}`;
+  const canonicalUrl = `https://amrenterprises.com${config.canonicalPath ?? ""}`;
   const fullTitle = config.title.includes(BRAND_CONFIG.name)
     ? config.title
     : `${config.title} — ${BRAND_CONFIG.name}`;
-  const ogImage = config.ogImage ?? "https://safenestindia.com/images/homepage/banner-1.jpg";
+  const ogImage = config.ogImage ?? "https://amrenterprises.com/images/homepage/banner-1.jpg";
   const robots = config.noIndex ? "noindex, follow" : "index, follow";
 
   const meta = [

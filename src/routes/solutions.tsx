@@ -9,7 +9,7 @@ export const Route = createFileRoute("/solutions")({
   head: () =>
     buildMetaTags({
       title: `Architectural Safety Solutions Explorer — ${BRAND_CONFIG.name}`,
-      description: `Explore the complete architectural catalog of ${BRAND_CONFIG.name}: invisible grills, safety netting, construction containment, and bird protection across South India.`,
+      description: `Explore the complete architectural catalog of ${BRAND_CONFIG.name}: invisible grills, safety netting, construction containment, and bird protection across Telangana & Andhra Pradesh.`,
       canonicalPath: "/solutions",
       ogImage: "/images/campaigns/campaign-2-card-1.jpg",
     }),

@@ -21,7 +21,7 @@ export const Route = createFileRoute("/maintenance-repair")({
         publisher: {
           "@type": "Organization",
           name: BRAND_CONFIG.name,
-          url: "https://safenestindia.com",
+          url: "https://amrenterprises.com",
         },
       },
     }),

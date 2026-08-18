@@ -236,7 +236,7 @@ function ConsultationPage() {
               </h1>
               <p className="sn-subtext text-[#44403C] max-w-lg mx-auto">
                 Complimentary digital laser calibration, structural anchorage evaluation, and
-                architectural specification across South India.
+                architectural specification across Telangana &amp; Andhra Pradesh.
               </p>
             </div>
 

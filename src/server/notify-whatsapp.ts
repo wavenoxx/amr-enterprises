@@ -1,6 +1,6 @@
 /**
  * Server-only WhatsApp Owner Notification Adapter.
- * Dispatches a formatted lead summary to the SafeNest owner via Meta WhatsApp Cloud API.
+ * Dispatches a formatted lead summary to the AMR Enterprises owner via Meta WhatsApp Cloud API.
  *
  * SECURITY:
  * - Server environment secrets only (WHATSAPP_API_TOKEN, WHATSAPP_PHONE_NUMBER_ID, OWNER_WHATSAPP_PHONE).

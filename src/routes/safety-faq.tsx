@@ -22,7 +22,7 @@ export const Route = createFileRoute("/safety-faq")({
         publisher: {
           "@type": "Organization",
           name: BRAND_CONFIG.name,
-          url: "https://safenestindia.com",
+          url: "https://amrenterprises.com",
         },
       },
     }),

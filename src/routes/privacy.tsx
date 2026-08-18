@@ -18,7 +18,7 @@ export const Route = createFileRoute("/privacy")({
         publisher: {
           "@type": "Organization",
           name: BRAND_CONFIG.name,
-          url: "https://safenestindia.com",
+          url: "https://amrenterprises.com",
         },
       },
     }),
@@ -212,7 +212,7 @@ function PrivacyPage() {
                     {BRAND_CONFIG.contact.phoneDisplay}
                   </a>
                 </p>
-                <p>• Operating Hubs: Hyderabad, Bengaluru, Chennai, Kochi, Visakhapatnam</p>
+                <p>• Operating Hubs: Hyderabad, Visakhapatnam, Vijayawada, Amaravati, Tirupati, Warangal, Hanamkonda</p>
               </div>
             </div>
           </section>
