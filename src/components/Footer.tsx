@@ -294,7 +294,7 @@ export function Footer() {
                 style={{ fontFamily: "'Inter', system-ui, sans-serif" }}
               >
                 An architectural safety advisor is available for scheduling on-site precision measurements
-                across South India:
+                across Telangana &amp; Andhra Pradesh:
               </p>
               <div className="flex flex-wrap gap-x-6 gap-y-2 text-xs font-light text-[#D6D3D1]">
                 <a
@@ -328,8 +328,8 @@ export function Footer() {
               <p className="font-serif italic text-base md:text-lg text-[#E7E5E4] font-light leading-relaxed">
                 "The art of architectural protection — securing your sanctuary with quiet elegance."
               </p>
-              <p className="mt-2 text-[10px] tracking-[0.25em] uppercase text-[#A8A29E] font-light">
-                Hyderabad · Bengaluru · Chennai · Kochi · Visakhapatnam
+              <p className="mt-2 text-[10px] tracking-[0.22em] uppercase text-[#A8A29E] font-light">
+                Hyderabad · Vizag · Vijayawada · Amaravati · Tirupati · Warangal · Hanamkonda
               </p>
             </div>
           </div>
@@ -349,7 +349,7 @@ export function Footer() {
                 style={{ fontFamily: "'Inter', system-ui, sans-serif" }}
                 aria-expanded={showServiceArea}
               >
-                <span>Verified Service Hubs: South India</span>
+                <span>Verified Service Hubs: Telangana &amp; Andhra Pradesh</span>
                 <span className="text-[9px]">{showServiceArea ? "▲" : "▼"}</span>
               </button>
               {showServiceArea && (
@@ -358,13 +358,10 @@ export function Footer() {
                   style={{ fontFamily: "'Inter', system-ui, sans-serif" }}
                 >
                   <p className="font-medium text-[#FAF8F5] text-[11px] uppercase tracking-wider text-[#F37021]">
-                    Operational Hubs
+                    Operational Hubs (7 Cities)
                   </p>
-                  <p>• Telangana: Hyderabad &amp; Secunderabad</p>
-                  <p>• Karnataka: Bengaluru &amp; Suburbs</p>
-                  <p>• Tamil Nadu: Chennai &amp; Coastal Corridor</p>
-                  <p>• Kerala: Kochi &amp; Ernakulam</p>
-                  <p>• Andhra Pradesh: Visakhapatnam &amp; Coastal Hubs</p>
+                  <p>• Telangana: Hyderabad &amp; Secunderabad, Warangal, Hanamkonda</p>
+                  <p>• Andhra Pradesh: Visakhapatnam, Vijayawada, Amaravati, Tirupati</p>
                   <div className="pt-2 border-t border-white/10">
                     <Link
                       to="/service-areas"

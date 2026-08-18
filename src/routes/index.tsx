@@ -12,7 +12,7 @@ export const Route = createFileRoute("/")({
     buildMetaTags({
       title: `${BRAND_CONFIG.name} — Invisible Grills & Safety Nets for Discerning Homes`,
       description:
-        "Bespoke architectural safety solutions: invisible grills, high-tensile safety netting, and bird deterrence for luxury residences across South India.",
+        "Bespoke architectural safety solutions: invisible grills, high-tensile safety netting, and bird deterrence for luxury residences across Telangana & Andhra Pradesh.",
       canonicalPath: "/",
       ogImage: "/images/homepage/banner-1.jpg",
     }),

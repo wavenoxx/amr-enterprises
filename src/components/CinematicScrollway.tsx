@@ -112,7 +112,7 @@ export const slides: SlideItem[] = [
     id: 10,
     category: "Regional Operations",
     title: "Verified Service Hubs",
-    descriptor: "Hyderabad · Bengaluru · Chennai · Kochi · Vizag",
+    descriptor: "Hyderabad · Vizag · Vijayawada · Amaravati · Tirupati · Warangal · Hanamkonda",
     action: "View Areas",
     link: "/service-areas",
     imageDesktop: "/images/homepage/banner-10.jpg",

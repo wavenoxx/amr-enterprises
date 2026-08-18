@@ -2,7 +2,7 @@ export const BRAND_CONFIG = {
   name: "AMR Enterprises",
   tagline: "The Art of Architectural Safety & Elegance",
   description:
-    "Bespoke architectural safety solutions: invisible grills, precision safety netting, and bird protection across South India.",
+    "Bespoke architectural safety solutions: invisible grills, precision safety netting, and bird protection across Telangana & Andhra Pradesh.",
 
   contact: {
     phoneDisplay: "+91 95538 79931",
@@ -11,7 +11,7 @@ export const BRAND_CONFIG = {
     whatsappDial: "919553879931",
     email: "amrenterprisesind@gmail.com",
     address:
-      "Regional Operations: South India (Telangana, Andhra Pradesh, Karnataka, Tamil Nadu, Kerala)",
+      "Operational Hubs: Telangana & Andhra Pradesh (Hyderabad, Visakhapatnam, Vijayawada, Amaravati, Tirupati, Warangal, Hanamkonda)",
   },
 
   socials: {

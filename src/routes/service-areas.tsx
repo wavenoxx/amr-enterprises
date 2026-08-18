@@ -8,20 +8,20 @@ import { buildMetaTags } from "@/lib/seo";
 export const Route = createFileRoute("/service-areas")({
   head: () =>
     buildMetaTags({
-      title: `Verified Service Areas & Regional Hubs — ${BRAND_CONFIG.name}`,
+      title: `Verified Service Areas (Telangana & Andhra Pradesh) — ${BRAND_CONFIG.name}`,
       description:
-        `Explore ${BRAND_CONFIG.name} verified service areas across South India: Hyderabad, Bengaluru, Chennai, Kochi, and Visakhapatnam.`,
+        `Explore ${BRAND_CONFIG.name} verified architectural safety hubs across 7 cities in Telangana & Andhra Pradesh: Hyderabad, Visakhapatnam, Vijayawada, Amaravati, Tirupati, Warangal, and Hanamkonda.`,
       canonicalPath: "/service-areas",
       jsonLd: {
         "@context": "https://schema.org",
         "@type": "WebPage",
         name: "Verified Service Areas & Regional Operations",
         description:
-          `${BRAND_CONFIG.name} regional architectural safety installation coverage across South India hubs.`,
+          `${BRAND_CONFIG.name} regional architectural safety installation coverage across Telangana and Andhra Pradesh urban corridors.`,
         publisher: {
           "@type": "Organization",
           name: BRAND_CONFIG.name,
-          url: "https://safenestindia.com",
+          url: "https://amrenterprises.com",
         },
       },
     }),
@@ -33,96 +33,139 @@ const REGIONAL_HUBS = [
     city: "Hyderabad & Secunderabad",
     tag: "Telangana Central Hub",
     description:
-      "Full architectural invisible grills and balcony safety netting for high-rise gated communities and luxury villas.",
+      "High-rise gated communities, premium duplexes, and luxury villa perimeters engineered with marine-grade invisible grills and fall-containment safety nets.",
     neighborhoods: [
       "Financial District",
       "Gachibowli",
       "HITEC City",
-      "Jubilee Hills",
       "Kokapet",
       "Kondapur",
       "Madhapur",
       "Nanakramguda",
+      "Jubilee Hills",
       "Banjara Hills",
       "Tellapur",
     ],
     climateNotes:
-      "Calibrated for high thermal variation and intense summer sun with UV-stabilized Nylon-12 coating.",
-  },
-  {
-    city: "Bengaluru (Bangalore)",
-    tag: "Karnataka Regional Operations",
-    description:
-      "Modern apartment balconies, internal staircase lines, and pigeon deterrence for high-density tech corridors.",
-    neighborhoods: [
-      "Whitefield",
-      "Sarjapur Road",
-      "Indiranagar",
-      "Koramangala",
-      "Bellandur",
-      "Hebbal",
-      "HSR Layout",
-      "Electronic City",
-      "Yelahanka",
-      "JP Nagar",
-    ],
-    climateNotes:
-      "All-weather monofilament HDPE netting and stainless steel tracks suited for year-round urban living.",
-  },
-  {
-    city: "Chennai",
-    tag: "Tamil Nadu Coastal Hub",
-    description:
-      "Marine-grade AISI 316 invisible grills engineered specifically for coastal salt air and tropical humidity.",
-    neighborhoods: [
-      "Old Mahabalipuram Road (OMR)",
-      "East Coast Road (ECR)",
-      "Anna Nagar",
-      "Adyar",
-      "Besant Nagar",
-      "Velachery",
-      "Thiruvanmiyur",
-      "Nungambakkam",
-      "Porur",
-      "Alwarpet",
-    ],
-    climateNotes:
-      "Strict AISI 316 austenitic stainless steel core specified to eliminate pitting from coastal sea breeze.",
-  },
-  {
-    city: "Kochi (Cochin)",
-    tag: "Kerala Coastal Operations",
-    description:
-      "Monsoon-resistant safety netting, stainless steel window grids, and bird protection for waterfront residences.",
-    neighborhoods: [
-      "Marine Drive",
-      "Kakkanad (Infopark)",
-      "Edappally",
-      "Panampilly Nagar",
-      "Kadavanthra",
-      "Aluva",
-      "Vyttila",
-      "Kaloor",
-    ],
-    climateNotes:
-      "Heavy monsoon water shedding and high-tensile anchor fasteners embedded into dense concrete.",
+      "Calibrated for high thermal variation and intense summer sun with UV-stabilized Nylon-12 coating and heavy-duty RCC slab anchor tracks.",
   },
   {
     city: "Visakhapatnam (Vizag)",
     tag: "Andhra Pradesh Coastal Hub",
     description:
-      "High-tensile balcony safety grids and bird deterrence for coastal high-rises and sea-facing apartments.",
+      "Marine-grade AISI 316 invisible grills and pigeon deterrence systems engineered specifically for coastal salt-spray corridors and sea-facing high-rises.",
     neighborhoods: [
-      "Beach Road",
       "Madhurawada",
+      "Yendada",
       "Rushikonda",
       "MVP Colony",
       "Seethammadhara",
-      "Yendada",
       "Siripuram",
+      "Beach Road",
+      "Pedda Waltair",
+      "Lawsons Bay Colony",
+      "Kommadi",
     ],
     climateNotes:
-      "Wind-calibrated anchor tracks engineered for coastal gust exposures and seaside humidity.",
+      "Wind-calibrated anchor tracks and strict AISI 316 austenitic stainless steel core specified to eliminate pitting from coastal sea breeze and tropical humidity.",
+  },
+  {
+    city: "Vijayawada",
+    tag: "Andhra Pradesh Central Urban Hub",
+    description:
+      "Dense urban residential corridors, commercial balconies, and premium apartments fitted with laser-measured safety netting and stainless steel bird spikes.",
+    neighborhoods: [
+      "Benz Circle",
+      "Patamata",
+      "Labbipet",
+      "Moghalrajpuram",
+      "Kanuru",
+      "Poranki",
+      "Tadigadapa",
+      "Currency Nagar",
+      "Ramavarappadu",
+      "Gunadala",
+    ],
+    climateNotes:
+      "High-temperature resistant polymer netting and anodized aluminum profiles designed for tropical heat and long-term tensile durability.",
+  },
+  {
+    city: "Amaravati",
+    tag: "Andhra Pradesh Capital Region Hub",
+    description:
+      "Contemporary residential projects, government employee quarters, and luxury villas throughout the expanding capital development geography.",
+    neighborhoods: [
+      "Tadepalli",
+      "Mangalagiri",
+      "Undavalli",
+      "Penumaka",
+      "Neerukonda",
+      "Kuragallu",
+      "Mandadam",
+      "Velagapudi",
+      "Rayapudi",
+      "Thullur",
+    ],
+    climateNotes:
+      "Engineered for open-plain wind dynamics and high-elevation residential balconies with reinforced expansion anchoring.",
+  },
+  {
+    city: "Tirupati",
+    tag: "Andhra Pradesh Southern Hub",
+    description:
+      "Established residential neighborhoods and pilgrimage corridors requiring specialized monkey protection nets, bird spikes, and balcony safety netting.",
+    neighborhoods: [
+      "MR Palli",
+      "Tiruchanur",
+      "Mangalam",
+      "Akkarampalle",
+      "Renigunta",
+      "Royal Nagar",
+      "Padmavathi Nagar",
+      "Balaji Colony",
+      "Vaikuntapuram",
+      "Karakambadi",
+    ],
+    climateNotes:
+      "High-tensile heavy-gauge netting formulated to withstand foothills wildlife pressure and prolonged direct solar radiation.",
+  },
+  {
+    city: "Warangal",
+    tag: "Telangana Eastern Urban Hub",
+    description:
+      "Major Tier-2 urban residential market with expanding multi-story apartments, internal stairwells, and terrace fall-containment installations.",
+    neighborhoods: [
+      "Kareemabad",
+      "Desaipet",
+      "Rangashaipet",
+      "Kashibugga",
+      "Kothawada",
+      "Urs",
+      "Khila Warangal / Fort Warangal",
+      "Girmajipet",
+    ],
+    climateNotes:
+      "Precision structural fastening into brick and concrete masonry using anti-corrosive stainless steel fasteners.",
+  },
+  {
+    city: "Hanamkonda",
+    tag: "Telangana Residential & Premium Housing Hub",
+    description:
+      "Fast-growing premium residential belt featuring contemporary apartments, independent homes, and duplex balconies fitted with invisible safety grills.",
+    neighborhoods: [
+      "Balasamudram",
+      "Subedari",
+      "Hunter Road",
+      "Waddepally",
+      "Nakkalagutta",
+      "Kumarpally",
+      "Gopalpur",
+      "Naim Nagar",
+      "Bheemaram",
+      "100 Feet Road",
+    ],
+    climateNotes:
+      "Laser site measurement protocols ensuring zero aesthetic disruption to architectural elevations and window sightlines.",
   },
 ];
 
@@ -135,14 +178,14 @@ function ServiceAreasPage() {
       <section className="relative w-full pt-32 pb-16 md:pt-40 md:pb-24 px-6 md:px-12 bg-[#FAF8F5] border-b border-[#1C1917]/10">
         <div className="max-w-4xl mx-auto text-center">
           <p className="sn-eyebrow text-[#F37021] mb-4 font-medium">
-            Regional Coverage
+            Telangana &amp; Andhra Pradesh Coverage
           </p>
           <h1 className="sn-h1 text-[#1C1917] mb-4">
-            Verified Service Areas
+            Verified Service Hubs
           </h1>
           <p className="sn-subtext text-[#44403C] max-w-2xl mx-auto">
             {BRAND_CONFIG.name} deploys trained master technicians and digital laser survey teams
-            across major metropolitan and coastal hubs in South India.
+            across 7 primary city hubs in Telangana and Andhra Pradesh.
           </p>
         </div>
       </section>
