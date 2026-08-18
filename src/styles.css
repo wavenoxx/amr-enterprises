@@ -1,0 +1,375 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Design system definition.
+ *
+ * The @theme inline block maps CSS custom properties to Tailwind utility
+ * classes (e.g. --color-primary -> bg-primary, text-primary).
+ *
+ * The :root and .dark blocks define the actual color values using oklch.
+ * All colors MUST use oklch format.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans:
+    "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: #050505;
+  --foreground: #ffffff;
+  --card: #0d0d0d;
+  --card-foreground: #ffffff;
+  --popover: #0d0d0d;
+  --popover-foreground: #ffffff;
+  --primary: #ffffff;
+  --primary-foreground: #050505;
+  --secondary: #171717;
+  --secondary-foreground: #ffffff;
+  --muted: #171717;
+  --muted-foreground: #a3a3a3;
+  --accent: #171717;
+  --accent-foreground: #ffffff;
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: #ffffff;
+  --border: rgba(255, 255, 255, 0.1);
+  --input: rgba(255, 255, 255, 0.15);
+  --ring: rgba(255, 255, 255, 0.3);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: #0d0d0d;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #ffffff;
+  --sidebar-primary-foreground: #050505;
+  --sidebar-accent: #171717;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: rgba(255, 255, 255, 0.1);
+  --sidebar-ring: rgba(255, 255, 255, 0.3);
+}
+
+.dark {
+  --background: oklch(0.129 0.042 264.695);
+  --foreground: oklch(0.984 0.003 247.858);
+  --card: oklch(0.208 0.042 265.755);
+  --card-foreground: oklch(0.984 0.003 247.858);
+  --popover: oklch(0.208 0.042 265.755);
+  --popover-foreground: oklch(0.984 0.003 247.858);
+  --primary: oklch(0.929 0.013 255.508);
+  --primary-foreground: oklch(0.208 0.042 265.755);
+  --secondary: oklch(0.279 0.041 260.031);
+  --secondary-foreground: oklch(0.984 0.003 247.858);
+  --muted: oklch(0.279 0.041 260.031);
+  --muted-foreground: oklch(0.704 0.04 256.788);
+  --accent: oklch(0.279 0.041 260.031);
+  --accent-foreground: oklch(0.984 0.003 247.858);
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: oklch(0.984 0.003 247.858);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.551 0.027 264.364);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.208 0.042 265.755);
+  --sidebar-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-accent: oklch(0.279 0.041 260.031);
+  --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.551 0.027 264.364);
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    border-color: var(--color-border);
+    -webkit-tap-highlight-color: transparent !important;
+  }
+
+  html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    scroll-behavior: auto;
+    scrollbar-gutter: stable;
+    overflow-x: hidden;
+    background-color: #050505 !important;
+    color-scheme: dark;
+  }
+
+  body,
+  #root,
+  #app,
+  main {
+    background-color: #050505 !important;
+    color: #ffffff !important;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  /* Form Elements: Ensure min 16px on mobile to prevent iOS Safari auto-zoom */
+  input,
+  textarea,
+  select {
+    font-size: 16px;
+  }
+
+  @media (min-width: 768px) {
+    input,
+    textarea,
+    select {
+      font-size: 0.875rem;
+    }
+  }
+
+  /* Accessible Touch Target sizing for coarse pointer devices (Mobile/Touch) */
+  @media (pointer: coarse) {
+    button,
+    a,
+    input[type="button"],
+    input[type="submit"],
+    input[type="reset"],
+    [role="button"] {
+      min-height: 44px;
+      min-width: 44px;
+    }
+  }
+}
+
+@utility font-display {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  font-display: swap;
+}
+
+@utility focus-ring {
+  outline: none;
+  &:focus-visible {
+    outline: 2px solid #171717;
+    outline-offset: 2px;
+  }
+}
+
+/* All entry animations removed — pure static quiet luxury, zero visual motion */
+@utility sn-anim-label {
+  opacity: 1;
+}
+
+@utility sn-anim-h1 {
+  opacity: 1;
+}
+
+@utility sn-anim-sub {
+  opacity: 1;
+}
+
+@utility sn-anim-cta {
+  opacity: 1;
+}
+
+/* ────────────────────────────────────────────────
+   Unified Brand Typography System (Quiet Luxury)
+   Matching Reference: Cormorant Garamond 300, 0.22em tracking
+   ──────────────────────────────────────────────── */
+
+.sn-h1,
+.sn-brand-title {
+  font-family: "Cormorant Garamond", Georgia, serif !important;
+  font-weight: 300 !important;
+  letter-spacing: 0.22em !important;
+  text-transform: uppercase !important;
+  font-size: clamp(0.72rem, 3vw, 1.35rem) !important;
+  line-height: 1.25 !important;
+}
+
+.sn-eyebrow {
+  font-family: "Inter", system-ui, sans-serif !important;
+  font-weight: 300 !important;
+  font-size: clamp(6.5px, 1.5vw, 8.5px) !important;
+  letter-spacing: 0.35em !important;
+  text-transform: uppercase !important;
+}
+
+.sn-subtext {
+  font-family: "Inter", system-ui, sans-serif !important;
+  font-weight: 300 !important;
+  font-size: clamp(7.8px, 1.9vw, 10px) !important;
+  letter-spacing: 0.04em !important;
+  line-height: 1.45 !important;
+}
+
+.sn-btn-luxury {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background-color: transparent;
+  color: #ffffff;
+  padding: 0.3rem 1.05rem;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: clamp(6.8px, 1.5vw, 7.8px);
+  font-weight: 300;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  transition: border-color 150ms, background-color 150ms, color 150ms;
+  min-height: 25px;
+}
+
+.sn-btn-luxury:hover {
+  border-color: #ffffff;
+  background-color: #ffffff;
+  color: #050505;
+}
+
+.sn-btn-luxury-solid {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ffffff;
+  background-color: #ffffff;
+  color: #050505;
+  padding: 0.625rem 1.75rem;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 9.5px;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  transition: border-color 150ms, background-color 150ms, color 150ms;
+  min-height: 40px;
+}
+
+.sn-btn-luxury-solid:hover {
+  background-color: transparent;
+  color: #ffffff;
+}
+
+/* Pure Black Visual Canvas (No visual images) */
+.sn-black-visual {
+  background-color: #050505;
+  background-image: radial-gradient(circle at 50% 50%, rgba(25, 25, 25, 0.3) 0%, rgba(5, 5, 5, 1) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Universal luxury image container */
+.sn-luxury-frame {
+  position: relative;
+  overflow: hidden;
+}
+
+/* No zoom animations — static pure luxury images */
+.sn-luxury-img {
+  transform: none;
+  transition: none;
+  will-change: auto;
+}
+
+/* Chanel Homepage Mockup Visual-to-Visual Scroll Section */
+.sn-chanel-slide {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  background-color: #050505;
+}
+
+/* No zoom animations on slide media */
+.sn-chanel-media {
+  transform: none;
+  transition: none;
+  will-change: auto;
+}
+
+/* ────────────────────────────────────────────────
+   Global Prefers-Reduced-Motion Handling
+   ──────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .sn-anim-label,
+  .sn-anim-h1,
+  .sn-anim-sub,
+  .sn-anim-cta,
+  .sn-anim-overlay,
+  .sn-fade-up,
+  .sn-fade,
+  .sn-dawn {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+
+  /* Disable all scale transforms for reduced-motion users */
+  .sn-luxury-img,
+  .sn-chanel-media,
+  .sn-dolly-target {
+    transition: none !important;
+    transform: none !important;
+  }
+}
