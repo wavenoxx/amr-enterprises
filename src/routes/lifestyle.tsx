@@ -55,22 +55,22 @@ function LifestylePage() {
           loading="eager"
           decoding="async"
         />
-        {/* Delicate Ambient Vignette */}
+        {/* Soft lower-third atmospheric gradient preserving raw golden sunset clarity and brilliance */}
         <div
           className="absolute inset-0 pointer-events-none z-10"
           style={{
             background:
-              "linear-gradient(to top, rgba(28,25,23,0.8) 0%, rgba(28,25,23,0.25) 45%, rgba(28,25,23,0.6) 100%)",
+              "linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.18) 35%, transparent 65%)",
           }}
         />
         <div className="absolute inset-x-0 bottom-6 sm:bottom-10 md:bottom-14 text-center text-white px-6 max-w-4xl mx-auto z-20">
-          <p className="sn-eyebrow text-[#FAF8F5]/90 mb-1.5 md:mb-2 drop-shadow-md">
+          <p className="sn-eyebrow text-[#FAF8F5] mb-1.5 md:mb-2 drop-shadow-[0_1px_4px_rgba(0,0,0,0.9)]">
             The Lifestyle · {BRAND_CONFIG.name} House
           </p>
-          <h1 className="sn-h1 text-white max-w-3xl mx-auto drop-shadow-lg mb-2 md:mb-3">
+          <h1 className="sn-h1 text-white max-w-3xl mx-auto drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)] mb-2 md:mb-3">
             Living Without Hesitation
           </h1>
-          <p className="font-serif italic text-base sm:text-lg md:text-xl text-[#FAF8F5] leading-relaxed font-light drop-shadow-md">
+          <p className="font-serif italic text-base sm:text-lg md:text-xl text-[#FAF8F5] leading-relaxed font-light drop-shadow-[0_1.5px_6px_rgba(0,0,0,0.9)]">
             "Breathtaking views, enjoyed in absolute peace of mind."
           </p>
         </div>
