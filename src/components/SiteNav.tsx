@@ -1,14 +1,22 @@
 import { useState, useEffect } from "react";
 import { Link } from "@tanstack/react-router";
-import { BRAND_CONFIG } from "@/config/brand";
+import { User } from "lucide-react";
+import { AmrMonogram } from "./AmrLogo";
 import ContactDrawer from "./ContactDrawer";
 import MenuDrawer from "./MenuDrawer";
 
 /**
- * SiteNav — Minimalist Hermès Quiet Luxury Header with Soft Alabaster Liquid Glass.
+ * SiteNav — Ultra-Minimalist Quiet Luxury Header (LV & Hermès Design Psychology).
  *
- * - Transparent at top of page over hero visuals.
- * - Smoothly transitions into frosted Hermès warm alabaster liquid glass with subtle hairline border on scroll.
+ * Mobile Directives:
+ * - Left: Clean 2-line minimalist Menu icon (no text).
+ * - Center: Iconic AMR Brand Monogram mark (clean & balanced, no long text clutter).
+ * - Right: Clean Contact/Client Profile icon (no text).
+ *
+ * Desktop Directives:
+ * - Left: 2-line Menu icon + "Menu" text.
+ * - Center: AMR Brand Monogram + "AMR ENTERPRISES" luxury lettermark.
+ * - Right: "Contact us" text + direct advisory action.
  */
 export function SiteNav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -38,9 +46,11 @@ export function SiteNav() {
             : "bg-transparent border-b border-transparent text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)]"
         }`}
       >
-        <div className="grid grid-cols-[1fr_auto_1fr] items-center px-6 sm:px-8 lg:px-10 py-3.5 lg:py-4 w-full">
-          {/* Left: 2-line Menu Icon + Menu Text */}
-          <div className="flex items-center gap-6 min-w-0">
+        <div className="grid grid-cols-[1fr_auto_1fr] items-center px-4 sm:px-8 lg:px-10 py-3 sm:py-3.5 lg:py-4 w-full">
+          {/* ─────────────────────────────────────────────────────────────
+              LEFT: Minimal 2-Line Menu Icon (Icon only on mobile, text on desktop)
+              ───────────────────────────────────────────────────────────── */}
+          <div className="flex items-center min-w-0 justify-start">
             <button
               type="button"
               onClick={() => setIsMenuOpen(true)}
@@ -51,16 +61,16 @@ export function SiteNav() {
               }`}
               aria-label="Open navigation menu"
             >
-              <span className="flex flex-col gap-[5px] justify-center">
+              <span className="flex flex-col gap-[5.5px] justify-center py-1">
                 <span
-                  className={`block w-[16px] h-px transition-colors ${
+                  className={`block w-[18px] sm:w-[17px] h-[1.5px] sm:h-px transition-colors ${
                     isScrolled
                       ? "bg-[#1C1917] group-hover:bg-[#F37021]"
                       : "bg-white"
                   }`}
                 />
                 <span
-                  className={`block w-[16px] h-px transition-colors ${
+                  className={`block w-[18px] sm:w-[17px] h-[1.5px] sm:h-px transition-colors ${
                     isScrolled
                       ? "bg-[#1C1917] group-hover:bg-[#F37021]"
                       : "bg-white"
@@ -68,7 +78,7 @@ export function SiteNav() {
                 />
               </span>
               <span
-                className="text-[12px] sm:text-[13px] font-light tracking-[0.04em]"
+                className="hidden sm:inline text-[12px] sm:text-[13px] font-light tracking-[0.05em]"
                 style={{ fontFamily: "'Inter', system-ui, sans-serif" }}
               >
                 Menu
@@ -76,33 +86,69 @@ export function SiteNav() {
             </button>
           </div>
 
-          {/* Center: Brand Logo */}
-          <Link
-            to="/"
-            className={`font-serif text-[19px] sm:text-[22px] lg:text-[25px] tracking-[0.32em] uppercase whitespace-nowrap min-h-11 flex items-center justify-center focus-ring px-2 font-light transition-colors ${
-              isScrolled
-                ? "text-[#1C1917] hover:text-[#F37021]"
-                : "text-white hover:text-white/90"
-            }`}
-            style={{ fontWeight: 300 }}
-          >
-            {BRAND_CONFIG.name}
-          </Link>
+          {/* ─────────────────────────────────────────────────────────────
+              CENTER: Iconic AMR Brand Monogram (Mobile & Desktop)
+              ───────────────────────────────────────────────────────────── */}
+          <div className="flex items-center justify-center">
+            <Link
+              to="/"
+              className="flex items-center justify-center gap-2.5 min-h-11 px-2 focus-ring transition-opacity hover:opacity-85"
+              aria-label="AMR Enterprises Home"
+            >
+              {/* Mobile View: Clean, Iconic AMR Monogram Logo */}
+              <div className="md:hidden flex items-center justify-center">
+                <AmrMonogram
+                  className="w-7 h-7 sm:w-8 sm:h-8"
+                  color={isScrolled ? "#1C1917" : "#FFFFFF"}
+                  goldColor="#C5A880"
+                />
+              </div>
 
-          {/* Right: Contact us / Advisory */}
+              {/* Desktop View: Monogram + Tracked AMR ENTERPRISES Lettermark */}
+              <div className="hidden md:flex items-center gap-2.5">
+                <AmrMonogram
+                  className="w-6 h-6 shrink-0"
+                  color={isScrolled ? "#1C1917" : "#FFFFFF"}
+                  goldColor="#C5A880"
+                />
+                <span
+                  className={`font-serif text-[17px] lg:text-[19px] tracking-[0.32em] uppercase font-light transition-colors ${
+                    isScrolled ? "text-[#1C1917]" : "text-white"
+                  }`}
+                  style={{ fontWeight: 300 }}
+                >
+                  AMR ENTERPRISES
+                </span>
+              </div>
+            </Link>
+          </div>
+
+          {/* ─────────────────────────────────────────────────────────────
+              RIGHT: Contact Action (Icon only on mobile, text on desktop)
+              ───────────────────────────────────────────────────────────── */}
           <div className="flex items-center justify-end min-w-0">
             <button
               type="button"
               onClick={() => setIsContactOpen(true)}
-              className={`text-[12px] sm:text-[13px] font-light tracking-[0.04em] cursor-pointer min-h-11 px-2 focus-ring transition-colors ${
+              className={`flex items-center justify-end gap-2 min-h-11 min-w-11 px-1 cursor-pointer focus-ring transition-colors ${
                 isScrolled
                   ? "text-[#1C1917] hover:text-[#F37021]"
                   : "text-white hover:text-white/80"
               }`}
-              style={{ fontFamily: "'Inter', system-ui, sans-serif" }}
               aria-label="Open client service contact"
             >
-              Contact us
+              {/* Mobile View: Clean Profile / Contact Icon (Louis Vuitton Psychology) */}
+              <span className="sm:hidden flex items-center justify-center p-1">
+                <User size={20} strokeWidth={1.3} />
+              </span>
+
+              {/* Desktop View: Clean Text */}
+              <span
+                className="hidden sm:inline text-[12px] sm:text-[13px] font-light tracking-[0.05em]"
+                style={{ fontFamily: "'Inter', system-ui, sans-serif" }}
+              >
+                Contact us
+              </span>
             </button>
           </div>
         </div>

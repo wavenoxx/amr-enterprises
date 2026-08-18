@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { Link } from "@tanstack/react-router";
 import { BRAND_CONFIG } from "@/config/brand";
 import { trackEngagement } from "@/lib/analytics";
+import { AmrLogo } from "./AmrLogo";
 
 interface ContactDrawerProps {
   isOpen: boolean;
@@ -58,9 +59,7 @@ export function ContactDrawer({ isOpen, onClose }: ContactDrawerProps) {
       >
         {/* Top Header & Close */}
         <div className="flex items-center justify-between px-8 pt-8 pb-6 border-b border-[#1C1917]/10">
-          <h2 className="text-lg font-light tracking-wide text-[#1C1917] uppercase text-[13px] font-serif">
-            Client Service Advisory
-          </h2>
+          <AmrLogo variant="horizontal" color="#1C1917" goldColor="#C5A880" />
           <button
             ref={closeButtonRef}
             onClick={onClose}

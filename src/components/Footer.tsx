@@ -2,14 +2,23 @@ import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { BRAND_CONFIG } from "@/config/brand";
 import { trackEngagement } from "@/lib/analytics";
+import { AmrLogo } from "./AmrLogo";
 
 export function Footer() {
   const [showServiceArea, setShowServiceArea] = useState(false);
 
   return (
     <footer className="bg-[#1C1917] border-t border-[#1C1917] text-[#FAF8F5] select-none">
+      {/* BRAND HEADER */}
+      <div className="max-w-7xl mx-auto px-6 md:px-12 pt-16 pb-6 border-b border-white/10 flex flex-col sm:flex-row items-center justify-between gap-6">
+        <AmrLogo variant="horizontal" color="#FAF8F5" goldColor="#C5A880" />
+        <span className="text-[10px] tracking-[0.3em] uppercase text-[#A8A29E] font-light">
+          Architectural Safety Atelier
+        </span>
+      </div>
+
       {/* SECTION 1: 4-COLUMN LINK GRID */}
-      <div className="max-w-7xl mx-auto px-6 md:px-12 pt-16 pb-12">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 pt-12 pb-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
           {/* Column 1: SERVICES */}
           <div>

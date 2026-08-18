@@ -1,6 +1,8 @@
 import { useEffect, useRef } from "react";
 import { Link } from "@tanstack/react-router";
 
+import { AmrLogo } from "./AmrLogo";
+
 interface MenuDrawerProps {
   isOpen: boolean;
   onClose: () => void;
@@ -55,12 +57,13 @@ export function MenuDrawer({ isOpen, onClose, onOpenContact }: MenuDrawerProps) 
         aria-modal="true"
         aria-label="Main Navigation Menu"
       >
-        <div className="flex items-center mb-8">
+        <div className="flex items-center justify-between mb-8 pb-4 border-b border-[#1C1917]/10">
+          <AmrLogo variant="horizontal" color="#1C1917" goldColor="#C5A880" />
           <button
             ref={closeButtonRef}
             onClick={onClose}
             aria-label="Close navigation menu"
-            className="flex items-center gap-2 text-[10px] md:text-xs font-light tracking-[0.2em] text-[#78716C] hover:text-[#F37021] cursor-pointer uppercase bg-transparent border-0 min-h-11 min-w-11 px-2 focus-ring transition-colors"
+            className="flex items-center gap-1.5 text-[10px] md:text-xs font-light tracking-[0.2em] text-[#78716C] hover:text-[#F37021] cursor-pointer uppercase bg-transparent border-0 min-h-11 px-2 focus-ring transition-colors"
           >
             <svg
               className="w-4 h-4"
