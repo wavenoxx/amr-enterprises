@@ -6,17 +6,17 @@ import ContactDrawer from "./ContactDrawer";
 import MenuDrawer from "./MenuDrawer";
 
 /**
- * SiteNav — Ultra-Minimalist Quiet Luxury Header (LV & Hermès Design Psychology).
+ * SiteNav — Ultra-Clean Quiet Luxury Header (Hermès & Louis Vuitton Design DNA).
  *
- * Mobile Directives:
- * - Left: Clean 2-line minimalist Menu icon (no text).
- * - Center: Iconic AMR Brand Monogram mark (clean & balanced, no long text clutter).
- * - Right: Clean Contact/Client Profile icon (no text).
+ * Mobile View:
+ * - Left: Clean 2-line minimal icon (no text).
+ * - Center: Authentic AMR Brand Monogram (+50% size, bold, crisp, architectural window mark).
+ * - Right: Clean luxury Profile / Contact icon (no text).
  *
- * Desktop Directives:
- * - Left: 2-line Menu icon + "Menu" text.
- * - Center: AMR Brand Monogram + "AMR ENTERPRISES" luxury lettermark.
- * - Right: "Contact us" text + direct advisory action.
+ * Desktop View:
+ * - Left: 2-line icon + 'Menu' label.
+ * - Center: Pure, uncluttered 'AMR ENTERPRISES' luxury serif typography (no redundant icons).
+ * - Right: 'Contact us' client advisory link.
  */
 export function SiteNav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -42,11 +42,11 @@ export function SiteNav() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out ${
           isScrolled
-            ? "bg-[#FAF8F5]/92 backdrop-blur-xl border-b border-[#1C1917]/10 text-[#1C1917] shadow-[0_4px_24px_rgba(28,25,23,0.05)]"
+            ? "bg-[#FAF8F5]/94 backdrop-blur-xl border-b border-[#1C1917]/10 text-[#1C1917] shadow-[0_4px_24px_rgba(28,25,23,0.06)]"
             : "bg-transparent border-b border-transparent text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)]"
         }`}
       >
-        <div className="grid grid-cols-[1fr_auto_1fr] items-center px-4 sm:px-8 lg:px-10 py-3 sm:py-3.5 lg:py-4 w-full">
+        <div className="grid grid-cols-[1fr_auto_1fr] items-center px-4 sm:px-8 lg:px-12 py-2.5 sm:py-3.5 lg:py-4 w-full">
           {/* ─────────────────────────────────────────────────────────────
               LEFT: Minimal 2-Line Menu Icon (Icon only on mobile, text on desktop)
               ───────────────────────────────────────────────────────────── */}
@@ -63,14 +63,14 @@ export function SiteNav() {
             >
               <span className="flex flex-col gap-[5.5px] justify-center py-1">
                 <span
-                  className={`block w-[18px] sm:w-[17px] h-[1.5px] sm:h-px transition-colors ${
+                  className={`block w-[20px] sm:w-[17px] h-[1.5px] sm:h-px transition-colors ${
                     isScrolled
                       ? "bg-[#1C1917] group-hover:bg-[#F37021]"
                       : "bg-white"
                   }`}
                 />
                 <span
-                  className={`block w-[18px] sm:w-[17px] h-[1.5px] sm:h-px transition-colors ${
+                  className={`block w-[20px] sm:w-[17px] h-[1.5px] sm:h-px transition-colors ${
                     isScrolled
                       ? "bg-[#1C1917] group-hover:bg-[#F37021]"
                       : "bg-white"
@@ -78,7 +78,7 @@ export function SiteNav() {
                 />
               </span>
               <span
-                className="hidden sm:inline text-[12px] sm:text-[13px] font-light tracking-[0.05em]"
+                className="hidden sm:inline text-[12px] sm:text-[13px] font-light tracking-[0.06em]"
                 style={{ fontFamily: "'Inter', system-ui, sans-serif" }}
               >
                 Menu
@@ -87,32 +87,26 @@ export function SiteNav() {
           </div>
 
           {/* ─────────────────────────────────────────────────────────────
-              CENTER: Iconic AMR Brand Monogram (Mobile & Desktop)
+              CENTER: Brand Identity (Mobile: Authentic AMR Monogram | Desktop: Pure Lettermark)
               ───────────────────────────────────────────────────────────── */}
           <div className="flex items-center justify-center">
             <Link
               to="/"
-              className="flex items-center justify-center gap-2.5 min-h-11 px-2 focus-ring transition-opacity hover:opacity-85"
+              className="flex items-center justify-center min-h-11 px-2 focus-ring transition-opacity hover:opacity-85"
               aria-label="AMR Enterprises Home"
             >
-              {/* Mobile View: Clean, Iconic AMR Monogram Logo */}
-              <div className="md:hidden flex items-center justify-center">
+              {/* Mobile View: Authentic AMR Monogram Logo (50% larger, bold & prominent) */}
+              <div className="md:hidden flex items-center justify-center py-1">
                 <AmrMonogram
-                  className="w-7 h-7 sm:w-8 sm:h-8"
-                  color={isScrolled ? "#1C1917" : "#FFFFFF"}
-                  goldColor="#C5A880"
+                  className="h-10 sm:h-11 w-auto max-w-[50px] drop-shadow-[0_1px_4px_rgba(0,0,0,0.6)]"
+                  isDark={isScrolled}
                 />
               </div>
 
-              {/* Desktop View: Monogram + Tracked AMR ENTERPRISES Lettermark */}
-              <div className="hidden md:flex items-center gap-2.5">
-                <AmrMonogram
-                  className="w-6 h-6 shrink-0"
-                  color={isScrolled ? "#1C1917" : "#FFFFFF"}
-                  goldColor="#C5A880"
-                />
+              {/* Desktop View: Pure, Clean, Uncluttered AMR ENTERPRISES Typography */}
+              <div className="hidden md:flex items-center">
                 <span
-                  className={`font-serif text-[17px] lg:text-[19px] tracking-[0.32em] uppercase font-light transition-colors ${
+                  className={`font-serif text-[19px] lg:text-[22px] tracking-[0.34em] uppercase font-light transition-colors whitespace-nowrap ${
                     isScrolled ? "text-[#1C1917]" : "text-white"
                   }`}
                   style={{ fontWeight: 300 }}
@@ -137,14 +131,14 @@ export function SiteNav() {
               }`}
               aria-label="Open client service contact"
             >
-              {/* Mobile View: Clean Profile / Contact Icon (Louis Vuitton Psychology) */}
-              <span className="sm:hidden flex items-center justify-center p-1">
-                <User size={20} strokeWidth={1.3} />
+              {/* Mobile View: Clean Profile / Contact Icon */}
+              <span className="sm:hidden flex items-center justify-center p-1 text-current">
+                <User size={22} strokeWidth={1.3} />
               </span>
 
               {/* Desktop View: Clean Text */}
               <span
-                className="hidden sm:inline text-[12px] sm:text-[13px] font-light tracking-[0.05em]"
+                className="hidden sm:inline text-[12px] sm:text-[13px] font-light tracking-[0.06em]"
                 style={{ fontFamily: "'Inter', system-ui, sans-serif" }}
               >
                 Contact us

@@ -2,14 +2,14 @@ import { Link } from "@tanstack/react-router";
 import { BRAND_CONFIG } from "@/config/brand";
 
 /**
- * Hero — Hermès Quiet Luxury Hero with Master Architectural Visuals.
+ * Hero — Hermès & Louis Vuitton Quiet Luxury Hero with Master Architectural Visuals.
  *
  * Directives:
  * - Desktop View: Full-screen 16:9 / widescreen responsive hero canvas.
  * - Mobile View: 9:16 aspect ratio dedicated mobile portrait canvas.
  * - Separate desktop and mobile image slots.
- * - H1 Headline: "Invisible Grills & Safety Nets" (Cormorant Garamond 300).
- * - Subtext: "Architectural safety for modern discerning homes." (Inter 300).
+ * - H1 Headline: "Invisible Grills & Safety Nets" (35% increased size, Cormorant Garamond 300).
+ * - Subtext: "Architectural safety for modern discerning homes." (35% increased size, Inter 300).
  * - Hermès signature orange solid CTA + framed exploration CTA.
  */
 const Hero = () => {
@@ -51,19 +51,25 @@ const Hero = () => {
         className="absolute inset-0 pointer-events-none z-10"
         style={{
           background:
-            "linear-gradient(to bottom, rgba(28,25,23,0.2) 0%, rgba(28,25,23,0.08) 45%, rgba(28,25,23,0.65) 100%)",
+            "linear-gradient(to bottom, rgba(28,25,23,0.25) 0%, rgba(28,25,23,0.06) 40%, rgba(28,25,23,0.7) 100%)",
         }}
       />
 
       {/* Editorial Content Overlay (Lower-Third Placement) */}
       <div className="absolute inset-0 z-20 flex flex-col items-center justify-end pb-14 sm:pb-20 md:pb-24 px-6 md:px-12 text-center">
-        {/* Unified H1 Headline with crisp contrast drop-shadow */}
-        <h1 className="sn-h1 text-white max-w-2xl drop-shadow-[0_2px_12px_rgba(0,0,0,0.7)] mb-3">
+        {/* Unified H1 Headline — 35% larger, bold, crisp contrast drop-shadow */}
+        <h1
+          className="font-serif font-light text-[1.4rem] sm:text-[1.8rem] md:text-[2.6rem] lg:text-[3.2rem] tracking-[0.16em] sm:tracking-[0.22em] text-white uppercase max-w-3xl leading-[1.22] drop-shadow-[0_2px_14px_rgba(0,0,0,0.85)] mb-3 px-2"
+          style={{ fontWeight: 300 }}
+        >
           Invisible Grills &amp; Safety Nets
         </h1>
 
-        {/* Unified Subtext Descriptor */}
-        <p className="sn-subtext text-[#FAF8F5] max-w-md drop-shadow-[0_1.5px_6px_rgba(0,0,0,0.85)] mb-8">
+        {/* Unified Subtext Descriptor — 35% larger, crystal clear legibility */}
+        <p
+          className="font-sans font-light text-[0.88rem] sm:text-[1rem] md:text-[1.16rem] tracking-[0.03em] text-[#FAF8F5] max-w-lg leading-relaxed drop-shadow-[0_1.5px_8px_rgba(0,0,0,0.9)] mb-8 px-4"
+          style={{ fontWeight: 300 }}
+        >
           Architectural safety for modern discerning homes.
         </p>
 
@@ -71,13 +77,13 @@ const Hero = () => {
         <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto px-4 sm:px-0">
           <Link
             to="/consultation"
-            className="sn-btn-luxury-solid w-full sm:w-auto focus-ring"
+            className="sn-btn-luxury-solid w-full sm:w-auto px-8 py-3.5 sm:py-3 text-[10.5px] sm:text-[11.5px] tracking-[0.22em] focus-ring"
           >
             Request Site Survey
           </Link>
           <Link
             to="/solutions"
-            className="sn-btn-luxury w-full sm:w-auto focus-ring"
+            className="sn-btn-luxury w-full sm:w-auto px-8 py-3.5 sm:py-3 text-[10.5px] sm:text-[11.5px] tracking-[0.22em] focus-ring"
           >
             Explore Solutions
           </Link>
