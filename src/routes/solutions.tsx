@@ -177,7 +177,7 @@ function SolutionsExplorer() {
                 <img
                   src={col.backdrop}
                   alt={col.title}
-                  className="w-full h-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-105"
+                  className="w-full h-full object-cover"
                   loading="eager"
                 />
               </div>

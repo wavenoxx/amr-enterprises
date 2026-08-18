@@ -306,7 +306,7 @@ function ServicePage() {
                       src={rel.images[0]}
                       alt={rel.title}
                       loading="lazy"
-                      className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                      className="w-full h-full object-cover"
                     />
                   </div>
                   <h3 className="font-serif text-base font-light text-[#1C1917] uppercase tracking-wide group-hover:text-[#F37021] transition-colors">

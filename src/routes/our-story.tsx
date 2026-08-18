@@ -152,7 +152,7 @@ function StoryPage() {
     <div className="relative h-screen w-screen overflow-hidden select-none bg-[#FAF8F5]">
       {/* 1. Fixed Sky Gradient Canvas */}
       <div
-        className="fixed inset-0 w-full h-full pointer-events-none z-0"
+        className="fixed inset-0 w-full h-full pointer-events-none z-0 transition-all duration-1000 ease-out"
         style={{ background: `linear-gradient(to bottom, ${phase.from}, ${phase.to})` }}
         aria-hidden="true"
       />
@@ -206,16 +206,27 @@ function StoryPage() {
               key={c.name}
               className="w-screen h-screen snap-start relative flex items-center justify-center overflow-hidden bg-transparent p-4 sm:p-6"
             >
-              <div className="border border-white/40 bg-[#FAF8F5]/85 backdrop-blur-2xl p-6 sm:p-8 md:p-10 w-full max-w-sm sm:max-w-md md:max-w-lg flex flex-col items-center justify-center shadow-2xl">
-                {/* Visual Card Image */}
-                <div className="w-full h-56 sm:h-64 md:h-72 overflow-hidden border border-[#1C1917]/10 mb-5 relative shadow-sm">
+              {/* Apple Liquid Glass UI Card Container */}
+              <div
+                className={`p-6 sm:p-8 md:p-10 w-full max-w-sm sm:max-w-md md:max-w-lg flex flex-col items-center justify-center transition-all duration-700 backdrop-blur-2xl backdrop-saturate-150 border ${
+                  phase.dark
+                    ? "bg-[#1C1917]/35 border-white/20 shadow-[0_16px_48px_rgba(0,0,0,0.5)] text-white"
+                    : "bg-white/35 border-white/60 shadow-[0_16px_48px_rgba(0,0,0,0.12)] text-[#1C1917]"
+                }`}
+              >
+                {/* Visual Card Image with Frosted Border */}
+                <div
+                  className={`w-full h-56 sm:h-64 md:h-72 overflow-hidden border mb-5 relative shadow-sm ${
+                    phase.dark ? "border-white/20" : "border-white/50"
+                  }`}
+                >
                   <img
                     src={c.image}
                     alt={`${c.name} — ${c.time} atmospheric safety setting`}
                     className="w-full h-full object-cover"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1C1917]/40 via-transparent to-transparent pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent pointer-events-none" />
                 </div>
 
                 {/* Time Indicator */}
@@ -227,13 +238,19 @@ function StoryPage() {
                 </p>
 
                 {/* Chapter / Phase Title */}
-                <h2 className="font-serif uppercase text-xl sm:text-2xl font-light text-center mt-1.5 text-[#1C1917] tracking-[0.18em]">
+                <h2
+                  className={`font-serif uppercase text-xl sm:text-2xl font-light text-center mt-1.5 tracking-[0.18em] ${
+                    phase.dark ? "text-white" : "text-[#1C1917]"
+                  }`}
+                >
                   {c.name}
                 </h2>
 
                 {/* Narrative Copy */}
                 <p
-                  className="text-[12px] sm:text-[13px] text-center mt-2.5 font-light max-w-xs leading-relaxed text-[#44403C]"
+                  className={`text-[12px] sm:text-[13px] text-center mt-2.5 font-light max-w-xs leading-relaxed ${
+                    phase.dark ? "text-[#E7E5E4]" : "text-[#44403C]"
+                  }`}
                   style={{ fontFamily: "'Inter', sans-serif" }}
                 >
                   {c.copy}
@@ -243,16 +260,17 @@ function StoryPage() {
           );
         })}
 
+        {/* Midnight Below: Curate Your Sanctuary Liquid Glass Box */}
         <section className="w-screen min-h-screen snap-start relative flex flex-col items-center justify-between overflow-hidden bg-transparent">
           <div className="flex-1 flex items-center justify-center w-full pt-28 pb-12 px-6">
-            <div className="border border-[#1C1917]/10 bg-white/95 backdrop-blur-2xl p-8 sm:p-10 md:p-14 w-full max-w-sm sm:max-w-md flex flex-col items-center shadow-2xl">
+            <div className="border border-white/30 bg-[#1C1917]/40 backdrop-blur-2xl backdrop-saturate-150 p-8 sm:p-10 md:p-14 w-full max-w-sm sm:max-w-md flex flex-col items-center text-center shadow-[0_16px_48px_rgba(0,0,0,0.5)]">
               <span className="sn-eyebrow text-[#F37021] mb-3 block font-medium">
                 Genesis of Serenity
               </span>
-              <h3 className="font-serif uppercase text-2xl font-light text-center text-[#1C1917] tracking-[0.18em]">
+              <h3 className="font-serif uppercase text-2xl font-light text-center text-white tracking-[0.18em]">
                 Curate Your Sanctuary
               </h3>
-              <p className="text-xs text-[#44403C] text-center font-light mt-3 mb-8 leading-relaxed max-w-xs">
+              <p className="text-xs text-[#E7E5E4] text-center font-light mt-3 mb-8 leading-relaxed max-w-xs">
                 From dawn to midnight, preserve your sanctuary with invisible architectural grace.
               </p>
               <Link

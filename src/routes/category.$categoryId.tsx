@@ -145,7 +145,7 @@ function CategoryPage() {
                     src={s.images[0]}
                     alt={s.title}
                     loading="lazy"
-                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                    className="w-full h-full object-cover"
                   />
                 </div>
                 <span className="text-[9px] font-mono tracking-widest text-[#F37021] uppercase block mb-1 font-medium">

@@ -89,7 +89,7 @@ function LifestylePage() {
                   src={p.image}
                   alt={p.title}
                   loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <div className="px-2 md:px-8">
