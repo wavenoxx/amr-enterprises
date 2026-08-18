@@ -24,7 +24,7 @@ const Hero = () => {
         data-slot="desktop-hero-canvas"
       >
         <img
-          src="/images/homepage/hero-desktop.jpg"
+          src="/images/homepage/hero-desktop.png"
           alt="AMR Enterprises Widescreen Balcony Safety View"
           className="w-full h-full object-cover"
           loading="eager"
@@ -38,7 +38,7 @@ const Hero = () => {
         data-slot="mobile-hero-canvas-9-16"
       >
         <img
-          src="/images/homepage/hero-mobile.jpg"
+          src="/images/homepage/hero-mobile.png"
           alt="AMR Enterprises Architectural Safety — Mobile Balcony View (9:16)"
           className="w-full h-full object-cover object-center"
           loading="eager"
