@@ -131,7 +131,7 @@ function ServicePage() {
               <img
                 src={imgUrl}
                 alt={`${service.title} architectural installation detail ${i + 1}`}
-                className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                className="w-full h-full object-cover"
                 loading={i === 0 ? "eager" : "lazy"}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#1C1917]/30 via-transparent to-[#1C1917]/10 pointer-events-none" />
